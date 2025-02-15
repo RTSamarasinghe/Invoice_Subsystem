@@ -1,7 +1,7 @@
 
 # Invoice Subsystem - Very Good Building & Development Company (VGB)
 
-##Authors
+## Authors
  - Yin Po Po Aung 
 
  - Rometh Samarasinghe (rsamarasinghe2@huskers.unl.edu)

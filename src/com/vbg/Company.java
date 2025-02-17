@@ -5,5 +5,7 @@ public class Company {
 
 
 	String hell = "hell";
+	
+	String x = "balls";
 
 }

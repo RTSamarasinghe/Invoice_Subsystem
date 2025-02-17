@@ -9,5 +9,6 @@ public class Company {
 	String x = "balls";
 	String y = "balls";
 	
+	String popo = "Yin";
 
 }

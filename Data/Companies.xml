@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+  <row>
+    <companyUUID>5119aca1-1b5b-4ce9-ba85-4a4ed392ddc3</companyUUID>
+    <contactUUID>663dd1b7-926c-4a8c-86d6-3134173c0ce5</contactUUID>
+    <name>Voonix</name>
+    <street>4 Grim Junction</street>
+    <city>Durham</city>
+    <state>NC</state>
+    <zip>27710</zip>
+  </row>
+  <row>
+    <companyUUID>536654c6-72d5-4133-8641-30c73571ccb6</companyUUID>
+    <contactUUID>55a430da-ad06-426d-80b2-989e43196efe</contactUUID>
+    <name>Plajo</name>
+    <street>13458 Bultman Park</street>
+    <city>Wichita</city>
+    <state>KS</state>
+    <zip>67230</zip>
+  </row>
+  <row>
+    <companyUUID>7d8191cb-1c7e-4bcd-a965-19ecc5d274ab</companyUUID>
+    <contactUUID>1573abde-d51d-4030-9d72-2219d8ada01e</contactUUID>
+    <name>Babbleset</name>
+    <street>23 Crowley Plaza</street>
+    <city>Oklahoma City</city>
+    <state>OK</state>
+    <zip>73109</zip>
+  </row>
+  <row>
+    <companyUUID>b433e8e3-ea96-4376-9b08-3a4534fdece7</companyUUID>
+    <contactUUID>6281ef7f-6eff-46a2-a394-0a86ed1d2115</contactUUID>
+    <name>Meemm</name>
+    <street>5 Redwing Pass</street>
+    <city>Atlanta</city>
+    <state>GA</state>
+    <zip>30386</zip>
+  </row>
+  <row>
+    <companyUUID>d1bdd06c-5d6d-4899-8e99-abaec8cda2dd</companyUUID>
+    <contactUUID>6c9499bc-393a-4b67-909a-aa343785e42b</contactUUID>
+    <name>Trunyx</name>
+    <street>1 Heffernan Center</street>
+    <city>Charlotte</city>
+    <state>NC</state>
+    <zip>28284</zip>
+  </row>
+  <row>
+    <companyUUID>4eaba6c5-b7b9-48f0-a9c5-5baed124f35f</companyUUID>
+    <contactUUID>c50893f2-ed7c-409c-aa7c-3c1e4812dae2</contactUUID>
+    <name>Ntags</name>
+    <street>57838 Duke Center</street>
+    <city>Irvine</city>
+    <state>CA</state>
+    <zip>92619</zip>
+  </row>
+  <row>
+    <companyUUID>24722a37-1d26-48db-bcd6-fde64feed2d5</companyUUID>
+    <contactUUID>f99bb536-0f8f-4161-8276-c5b72add2002</contactUUID>
+    <name>Aimbu</name>
+    <street>4 Erie Trail</street>
+    <city>Cincinnati</city>
+    <state>OH</state>
+    <zip>45203</zip>
+  </row>
+  <row>
+    <companyUUID>8e04dbd4-8371-4b52-b017-29e56c299d5b</companyUUID>
+    <contactUUID>c121c727-3d64-4d56-9909-937ca3cb3ae4</contactUUID>
+    <name>Photospace</name>
+    <street>24 Kipling Lane</street>
+    <city>Ocala</city>
+    <state>FL</state>
+    <zip>34474</zip>
+  </row>
+  <row>
+    <companyUUID>ea884d7c-1ed0-43fe-858e-cfc91c5c33da</companyUUID>
+    <contactUUID>4b3f5041-03a2-4e4e-80dd-25263f6c5cee</contactUUID>
+    <name>Thoughtblab</name>
+    <street>5 Calypso Drive</street>
+    <city>Fullerton</city>
+    <state>CA</state>
+    <zip>92640</zip>
+  </row>
+  <row>
+    <companyUUID>856f3149-395b-4f08-acbf-c69a7dd102a5</companyUUID>
+    <contactUUID>2253803b-6330-452e-8901-f15e2cd8839a</contactUUID>
+    <name>Skalith</name>
+    <street>91 Main Center</street>
+    <city>Sioux Falls</city>
+    <state>SD</state>
+    <zip>57188</zip>
+  </row>
+</root>

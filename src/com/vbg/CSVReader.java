@@ -66,7 +66,7 @@ public class CSVReader {
             while ((line = reader.readLine()) != null) {
                 String[] parts = parseCsvLine(line);
                 
-                // Changed from uuid to companyUuid to match Company constructor
+                
                 UUID companyUuid = UUID.fromString(parts[0]);
                 UUID contactUuid = UUID.fromString(parts[1]);
                 String name = parts[2];
@@ -75,7 +75,7 @@ public class CSVReader {
                 String state = parts[5];
                 String zip = parts[6];
                 
-                // Updated to match Company constructor parameter names
+                
                 companies.add(new Company(companyUuid, contactUuid, name, street, city, state, zip));
             }
         }

@@ -13,6 +13,7 @@ public class Person {
     private final UUID uuid;
     private final String firstName;
     private final String lastName;
+    private final String phone;
     private final List<String> emails;
 
     /**
@@ -24,10 +25,11 @@ public class Person {
      * @param emails    List of email addresses associated with the person
      */
    
-    public Person(UUID uuid, String firstName, String lastName, List<String> emails) {
+    public Person(UUID uuid, String firstName, String lastName, String phone, List<String> emails) {
         this.uuid = uuid;
         this.firstName = firstName;
         this.lastName = lastName;
+        this.phone = phone;
         this.emails = new ArrayList<>(emails);
     }
 

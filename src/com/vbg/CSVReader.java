@@ -33,16 +33,17 @@ public class CSVReader {
                 UUID uuid = UUID.fromString(parts[0]);
                 String firstName = parts[1];
                 String lastName = parts[2];
+                String phone = parts[3];
                 
                 // Parse emails (might be empty)
                 List<String> emails = new ArrayList<>();
-                for (int i = 3; i < parts.length; i++) {
+                for (int i = 4; i < parts.length; i++) {
                     if (!parts[i].trim().isEmpty()) {
                         emails.add(parts[i]);
                     }
                 }
                 
-                persons.add(new Person(uuid, firstName, lastName, emails));
+                persons.add(new Person(uuid, firstName, lastName, phone,  emails));
             }
         }
         

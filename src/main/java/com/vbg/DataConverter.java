@@ -10,7 +10,9 @@ import com.google.gson.GsonBuilder;
 import com.thoughtworks.xstream.XStream;
 import com.vbg.CSVReader;
 
-
+/*
+ * Outputs .json and .xml files parsed in as List objects.
+ */
 public class DataConverter {
 	
 /**

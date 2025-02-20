@@ -1,108 +1,87 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<root>
-  <row>
+<list>
+  <Equipment>
     <uuid>2dd5220e-6779-4fe7-81d2-b79dcbff3415</uuid>
-    <type>E</type>
     <name>Dragline</name>
-    <field>DX200b</field>
-    <FIELD5>347125</FIELD5>
-  </row>
-  <row>
+    <model>DX200b</model>
+    <price>347125.0</price>
+  </Equipment>
+  <Equipment>
     <uuid>4c0c851d-0466-42c8-8631-0b414db5be98</uuid>
-    <type>E</type>
     <name>Bulldozer</name>
-    <field>XPXY4</field>
-    <FIELD5>125500</FIELD5>
-  </row>
-  <row>
+    <model>XPXY4</model>
+    <price>125500.0</price>
+  </Equipment>
+  <Equipment>
     <uuid>984bac8d-96f7-4d6b-9948-1cabae15ba51</uuid>
-    <type>E</type>
     <name>Compactor</name>
-    <field>FLT100</field>
-    <FIELD5>4500</FIELD5>
-  </row>
-  <row>
+    <model>FLT100</model>
+    <price>4500.0</price>
+  </Equipment>
+  <Equipment>
     <uuid>50e6f93f-3792-459f-b1c6-b512b994ff2b</uuid>
-    <type>E</type>
     <name>Dump Truck</name>
-    <field>DUMPRX5000</field>
-    <FIELD5>90450</FIELD5>
-  </row>
-  <row>
+    <model>DUMPRX5000</model>
+    <price>90450.0</price>
+  </Equipment>
+  <Equipment>
     <uuid>e9afb98d-ac99-4974-a274-2dca5c1238f5</uuid>
-    <type>E</type>
     <name>Skid-Steer</name>
-    <field>S4325</field>
-    <FIELD5>8500</FIELD5>
-  </row>
-  <row>
+    <model>S4325</model>
+    <price>8500.0</price>
+  </Equipment>
+  <Material>
     <uuid>ac47e0f6-5b5b-49fe-af54-a6625a6374a8</uuid>
-    <type>M</type>
     <name>concrete</name>
-    <field>bag</field>
-    <FIELD5>40</FIELD5>
-  </row>
-  <row>
+    <unit>bag</unit>
+    <costPerUnit>40.0</costPerUnit>
+  </Material>
+  <Material>
     <uuid>72e157ac-5b46-4b3b-b86b-599a89be7289</uuid>
-    <type>M</type>
     <name>sand</name>
-    <field>ton</field>
-    <FIELD5>1500</FIELD5>
-  </row>
-  <row>
+    <unit>ton</unit>
+    <costPerUnit>1500.0</costPerUnit>
+  </Material>
+  <Material>
     <uuid>97dc9f91-c009-4e8d-b08c-3d4d0ded0bad</uuid>
-    <type>M</type>
     <name>nails</name>
-    <field>box</field>
-    <FIELD5>15</FIELD5>
-  </row>
-  <row>
+    <unit>box</unit>
+    <costPerUnit>15.0</costPerUnit>
+  </Material>
+  <Material>
     <uuid>30bebf58-ba44-4bef-885f-8fccb7db9544</uuid>
-    <type>M</type>
     <name>lumber</name>
-    <field>lft</field>
-    <FIELD5>8</FIELD5>
-  </row>
-  <row>
+    <unit>lft</unit>
+    <costPerUnit>8.0</costPerUnit>
+  </Material>
+  <Material>
     <uuid>8c8bbffa-a939-44f4-98b7-66837e7d16e9</uuid>
-    <type>M</type>
     <name>drywall</name>
-    <field>sheet</field>
-    <FIELD5>35</FIELD5>
-  </row>
-  <row>
+    <unit>sheet</unit>
+    <costPerUnit>35.0</costPerUnit>
+  </Material>
+  <Contract>
     <uuid>38bebacb-a3ca-459e-a71f-8e5826a2f7fa</uuid>
-    <type>C</type>
     <name>foundation pour</name>
-    <field>0673a09a-5cc1-4269-88f2-e665c2f3f33c</field>
-    <FIELD5></FIELD5>
-  </row>
-  <row>
+    <companyUuid>0673a09a-5cc1-4269-88f2-e665c2f3f33c</companyUuid>
+  </Contract>
+  <Contract>
     <uuid>699607c3-d9db-4aef-a8ab-b3a6cab21e12</uuid>
-    <type>C</type>
     <name>footing pour</name>
-    <field>0673a09a-5cc1-4269-88f2-e665c2f3f33c</field>
-    <FIELD5></FIELD5>
-  </row>
-  <row>
+    <companyUuid>0673a09a-5cc1-4269-88f2-e665c2f3f33c</companyUuid>
+  </Contract>
+  <Contract>
     <uuid>ce9fc7f6-8be8-48cb-9236-7873dbf9b2b7</uuid>
-    <type>C</type>
     <name>concrete pad pour</name>
-    <field>0673a09a-5cc1-4269-88f2-e665c2f3f33c</field>
-    <FIELD5></FIELD5>
-  </row>
-  <row>
+    <companyUuid>0673a09a-5cc1-4269-88f2-e665c2f3f33c</companyUuid>
+  </Contract>
+  <Contract>
     <uuid>97ee84b8-dc93-4db2-84bd-48e72a7f3131</uuid>
-    <type>C</type>
     <name>electric install</name>
-    <field>a8bae950-96ac-43a9-9a29-729db552e981</field>
-    <FIELD5></FIELD5>
-  </row>
-  <row>
+    <companyUuid>a8bae950-96ac-43a9-9a29-729db552e981</companyUuid>
+  </Contract>
+  <Contract>
     <uuid>b118fa82-14cf-46f4-8574-41e583badc27</uuid>
-    <type>C</type>
     <name>generator install</name>
-    <field>a8bae950-96ac-43a9-9a29-729db552e981</field>
-    <FIELD5></FIELD5>
-  </row>
-</root>
+    <companyUuid>a8bae950-96ac-43a9-9a29-729db552e981</companyUuid>
+  </Contract>
+</list>

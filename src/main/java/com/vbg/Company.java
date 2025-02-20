@@ -18,7 +18,7 @@ public class Company {
     /**
      * Constructs a Company with the given attributes
      * 
-     * @param companyUuid        The UUID of the company
+     * @param companyUuid The UUID of the company
      * @param contactUuid The UUID of the contact person
      * @param name        The name of the company
      * @param street      The street address of the company

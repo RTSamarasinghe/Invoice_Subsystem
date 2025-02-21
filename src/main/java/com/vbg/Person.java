@@ -13,7 +13,7 @@ public class Person {
     private final UUID uuid;
     private final String firstName;
     private final String lastName;
-    private final String phone;
+	private final String phone;
     private final List<String> emails;
 
     /**
@@ -57,6 +57,11 @@ public class Person {
     public List<String> getEmails() {
         return Collections.unmodifiableList(emails);
     }
+    
+    public String getPhone() {
+		return phone;
+	}
+
 
     @Override
     public String toString() {

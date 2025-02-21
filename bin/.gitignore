@@ -1,1 +1,11 @@
+<<<<<<< HEAD
 /main/
+=======
+/Persons.json
+/com/
+/Companies.json
+/Companies.xml
+/Items.json
+/Items.xml
+/Persons.xml
+>>>>>>> branch 'main' of https://github.com/RTSamarasinghe/Invoice_Subsystem.git

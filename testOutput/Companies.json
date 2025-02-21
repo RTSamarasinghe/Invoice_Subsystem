@@ -1,0 +1,92 @@
+[
+  {
+    "companyUuid": "5119aca1-1b5b-4ce9-ba85-4a4ed392ddc3",
+    "contactUuid": "663dd1b7-926c-4a8c-86d6-3134173c0ce5",
+    "name": "Voonix",
+    "street": "4 Grim Junction",
+    "city": "Durham",
+    "state": "NC",
+    "zip": "27710"
+  },
+  {
+    "companyUuid": "536654c6-72d5-4133-8641-30c73571ccb6",
+    "contactUuid": "55a430da-ad06-426d-80b2-989e43196efe",
+    "name": "Plajo",
+    "street": "13458 Bultman Park",
+    "city": "Wichita",
+    "state": "KS",
+    "zip": "67230"
+  },
+  {
+    "companyUuid": "7d8191cb-1c7e-4bcd-a965-19ecc5d274ab",
+    "contactUuid": "1573abde-d51d-4030-9d72-2219d8ada01e",
+    "name": "Babbleset",
+    "street": "23 Crowley Plaza",
+    "city": "Oklahoma City",
+    "state": "OK",
+    "zip": "73109"
+  },
+  {
+    "companyUuid": "b433e8e3-ea96-4376-9b08-3a4534fdece7",
+    "contactUuid": "6281ef7f-6eff-46a2-a394-0a86ed1d2115",
+    "name": "Meemm",
+    "street": "5 Redwing Pass",
+    "city": "Atlanta",
+    "state": "GA",
+    "zip": "30386"
+  },
+  {
+    "companyUuid": "d1bdd06c-5d6d-4899-8e99-abaec8cda2dd",
+    "contactUuid": "6c9499bc-393a-4b67-909a-aa343785e42b",
+    "name": "Trunyx",
+    "street": "1 Heffernan Center",
+    "city": "Charlotte",
+    "state": "NC",
+    "zip": "28284"
+  },
+  {
+    "companyUuid": "4eaba6c5-b7b9-48f0-a9c5-5baed124f35f",
+    "contactUuid": "c50893f2-ed7c-409c-aa7c-3c1e4812dae2",
+    "name": "Ntags",
+    "street": "57838 Duke Center",
+    "city": "Irvine",
+    "state": "CA",
+    "zip": "92619"
+  },
+  {
+    "companyUuid": "24722a37-1d26-48db-bcd6-fde64feed2d5",
+    "contactUuid": "f99bb536-0f8f-4161-8276-c5b72add2002",
+    "name": "Aimbu",
+    "street": "4 Erie Trail",
+    "city": "Cincinnati",
+    "state": "OH",
+    "zip": "45203"
+  },
+  {
+    "companyUuid": "8e04dbd4-8371-4b52-b017-29e56c299d5b",
+    "contactUuid": "c121c727-3d64-4d56-9909-937ca3cb3ae4",
+    "name": "Photospace",
+    "street": "24 Kipling Lane",
+    "city": "Ocala",
+    "state": "FL",
+    "zip": "34474"
+  },
+  {
+    "companyUuid": "ea884d7c-1ed0-43fe-858e-cfc91c5c33da",
+    "contactUuid": "4b3f5041-03a2-4e4e-80dd-25263f6c5cee",
+    "name": "Thoughtblab",
+    "street": "5 Calypso Drive",
+    "city": "Fullerton",
+    "state": "CA",
+    "zip": "92640"
+  },
+  {
+    "companyUuid": "856f3149-395b-4f08-acbf-c69a7dd102a5",
+    "contactUuid": "2253803b-6330-452e-8901-f15e2cd8839a",
+    "name": "Skalith",
+    "street": "91 Main Center",
+    "city": "Sioux Falls",
+    "state": "SD",
+    "zip": "57188"
+  }
+]

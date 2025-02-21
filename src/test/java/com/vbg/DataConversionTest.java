@@ -19,8 +19,6 @@ import static org.junit.jupiter.api.Assertions.assertFalse;
 
 /**
  * This is a suite of tests for the various {@link #DataConverter} derived classes.
- * The compiler errors should be addressed once you've completed the lab.
- * 
  */
 
 
@@ -39,31 +37,35 @@ public class DataConversionTest {
     public void clean() {
         deleteTestFiles();
     }
-
+    
+    /**
+     * Tests CSV to JSON conversion for Person data
+     */
     @Test
     public void testConvertToJsonPerson() throws IOException {
-    	// TODO: Create another test data file for person (5 people would do)
+    	
+    	DataConverter.convertToJson("data/Persons.csv", PERSON_JSON, Person.class);
 
-        DataConverter.convertToJson("data/Persons.csv", PERSON_JSON, Person.class);
-
-        // Assert: Verify the file was created and check content
+        
         File jsonFile = new File(PERSON_JSON);
         assertTrue(jsonFile.exists(), "JSON file was not created.");
         assertTrue(jsonFile.length() > 0, "JSON file is empty.");
 
-        // Read and verify JSON content
+        
         String jsonContent = new String(Files.readAllBytes(Paths.get(PERSON_JSON)));
         
-        //Reads the first person
+        
         assertTrue(jsonContent.contains("Gaultiero"), "Expected name not found in JSON.");
         assertTrue(jsonContent.contains("Betjes"), "Expected surname not found in JSON.");
     }
     
+    /**
+     * Tests CSV to JSON conversion for Item data
+     */
     @Test
     public void testConvertToJsonItem() throws IOException {
-    	//TODO: Create an Items test file
-        
-        DataConverter.convertToJson("data/Items.csv",ITEM_JSON, Item.class);
+   
+         DataConverter.convertToJson("data/Items.csv",ITEM_JSON, Item.class);
 
         
         File jsonFile = new File(ITEM_JSON);
@@ -75,9 +77,12 @@ public class DataConversionTest {
         assertTrue(jsonContent.contains("DX200b"), "Expected item description not found in JSON.");
     }
     
+    /**
+     * Tests CSV to JSON conversion for Company data
+     */
     @Test
     public void testConvertToJsonCompany() throws IOException {
-    	//TODO: Create an Company test file
+    	
         
         DataConverter.convertToJson("data/Companies.csv",COMPANY_JSON, Company.class);
 
@@ -91,6 +96,9 @@ public class DataConversionTest {
         assertTrue(jsonContent.contains("Voonix"), "Expected Company name not found in JSON.");
     }
 
+    /**
+     * Tests CSV to XML conversion for Company data
+     */
     @Test
     public void testConvertToXMLCompany() throws IOException {
        
@@ -106,6 +114,9 @@ public class DataConversionTest {
         assertTrue(xmlContent.contains("Voonix"), "Expected company address not found in XML.");
     }
     
+    /**
+     * Tests CSV to XML conversion for Item data
+     */
     @Test
     public void testConvertToXMLItem() throws IOException {
        
@@ -121,6 +132,9 @@ public class DataConversionTest {
         assertTrue(xmlContent.contains("DX200b"), "Expected Equipment Model number not found in XML.");
     }
     
+    /**
+     * Tests CSV to XML conversion for Person data
+     */
     @Test
     public void testConvertToXMLPerson() throws IOException {
        

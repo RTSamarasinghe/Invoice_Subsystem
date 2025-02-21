@@ -13,8 +13,6 @@ import static org.junit.jupiter.api.Assertions.assertNotNull;
 
 /**
  * This is a suite of tests for the various {@link #CSVReader} derived classes.
- * The compiler errors should be addressed once you've completed the lab.
- * 
  */
 
 public class CSVReaderTest {

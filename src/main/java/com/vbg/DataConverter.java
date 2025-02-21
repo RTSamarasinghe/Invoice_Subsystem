@@ -15,12 +15,12 @@ import com.vbg.CSVReader;
  */
 public class DataConverter {
 	
-/**
- * Converts Java Objects to JSON Objects and outputs it to a .json file	
- * @param outputpath	The location of the output file
- * @param entity The class to be converted
- */
-	public static void convertToJson(String inputfile, String outputpath, Object entity) {
+	/**
+	 * Converts Java Objects to JSON Objects and outputs it to a .json file	
+	 * @param outputpath	The location of the output file
+	 * @param entity The class to be converted
+	 */
+	public static void convertToJson(String inputfile, String outputpath, Class<?> entity) {
 		
 		String json = "";
 		Gson gson = new GsonBuilder()
@@ -42,7 +42,7 @@ public class DataConverter {
 			
 			try (FileWriter file = new FileWriter(outputpath)) {
 	            file.write(json);
-	            System.out.println("JSON file written succesfully");
+	            System.out.println("JSON file for " + entity.getSimpleName() + " written successfully");
 	        } catch (IOException e) {
 	            e.printStackTrace();
 	        }
@@ -61,7 +61,7 @@ public class DataConverter {
 	 * @param entity The class to be converted
 	 */
 	
-	public static void convertToXML(String inputFile, String outputpath, Object entity) {
+	public static void convertToXML(String inputFile, String outputpath, Class<?> entity)  {
 		
 		
 		String XML = "";
@@ -88,7 +88,7 @@ public class DataConverter {
 				
 				try (FileWriter file = new FileWriter(outputpath)) {
 		            file.write(XML);
-		            System.out.println("XML file written succesfully");
+		            System.out.println("XML file for " + entity.getSimpleName() + " written successfully");
 		        } catch (IOException e) {
 		            e.printStackTrace();
 		        }
@@ -109,8 +109,6 @@ public class DataConverter {
 		convertToXML("data/Items.csv", "output/Items.xml", Item.class);
 		convertToXML("data/Companies.csv", "output/Companies.xml", Company.class);
 		
-		
-
-	}
+		}
 
 }

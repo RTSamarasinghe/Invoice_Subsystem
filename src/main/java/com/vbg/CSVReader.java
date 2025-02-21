@@ -16,14 +16,15 @@ public class CSVReader {
     /**
      * Reads persons from the Persons CSV file.
      * 
+     * @path   CSV file path
      * @return List of Person objects
      * @throws IOException if there is an error reading the file
      */
-    public static List<Person> readPersons() throws IOException {
+    public static List<Person> readPersons(String path) throws IOException {
         List<Person> persons = new ArrayList<>();
         
-        try (BufferedReader reader = new BufferedReader(new FileReader("data/Persons.csv"))) {
-            // Skip header
+        try (BufferedReader reader = new BufferedReader(new FileReader(path))) {
+            
             reader.readLine();
             
             String line;
@@ -35,7 +36,7 @@ public class CSVReader {
                 String lastName = parts[2];
                 String phone = parts[3];
                 
-                // Parse emails (might be empty)
+                
                 List<String> emails = new ArrayList<>();
                 for (int i = 4; i < parts.length; i++) {
                     if (!parts[i].trim().isEmpty()) {
@@ -53,21 +54,22 @@ public class CSVReader {
     /**
      * Reads companies from the Companies CSV file.
      * 
+     * @path   CSV file path
      * @return List of Company objects
      * @throws IOException if there is an error reading the file
      */
-    public static List<Company> readCompanies() throws IOException {
+    public static List<Company> readCompanies(String path) throws IOException {
         List<Company> companies = new ArrayList<>();
         
-        try (BufferedReader reader = new BufferedReader(new FileReader("data/Companies.csv"))) {
-            // Skip header
+        try (BufferedReader reader = new BufferedReader(new FileReader(path))) {
+            
             reader.readLine();
             
             String line;
             while ((line = reader.readLine()) != null) {
                 String[] parts = parseCsvLine(line);
                 
-                // Changed from uuid to companyUuid to match Company constructor
+                
                 UUID companyUuid = UUID.fromString(parts[0]);
                 UUID contactUuid = UUID.fromString(parts[1]);
                 String name = parts[2];
@@ -87,13 +89,14 @@ public class CSVReader {
     /**
      * Reads items from the Items CSV file.
      * 
+     * @path   CSV file path
      * @return List of Item objects
      * @throws IOException if there is an error reading the file
      */
-    public static List<Item> readItems() throws IOException {
+    public static List<Item> readItems(String path) throws IOException {
         List<Item> items = new ArrayList<>();
         
-        try (BufferedReader reader = new BufferedReader(new FileReader("data/Items.csv"))) {
+        try (BufferedReader reader = new BufferedReader(new FileReader(path))) {
             // Skip header
             reader.readLine();
             

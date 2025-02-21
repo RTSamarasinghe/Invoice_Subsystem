@@ -55,7 +55,7 @@ public class Company {
 
     
     public String getFullAddress() {
-        return street + ", " + city + ", " + state + " " + zip;
+        return street + ", " + city + ", " + state + ", " + zip;
     }
 
     

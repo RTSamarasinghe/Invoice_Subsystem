@@ -17,10 +17,10 @@ public class DataConverter {
 	
 /**
  * Converts Java Objects to JSON Objects and outputs it to a .json file	
- * @param path	The location of the output file
+ * @param outputpath	The location of the output file
  * @param entity The class to be converted
  */
-	public static void convertToJson(String path, Object entity) {
+	public static void convertToJson(String inputfile, String outputpath, Object entity) {
 		
 		String json = "";
 		Gson gson = new GsonBuilder()
@@ -30,17 +30,17 @@ public class DataConverter {
 		try {
 			
 			if (entity == Person.class) {
-				json = gson.toJson(CSVReader.readPersons());
+				json = gson.toJson(CSVReader.readPersons(inputfile));
 			}
 			else if (entity == Company.class) {
-				json = gson.toJson(CSVReader.readCompanies());
+				json = gson.toJson(CSVReader.readCompanies(inputfile));
 			}
 			else if (entity == Item.class) {
-				json = gson.toJson(CSVReader.readItems());
+				json = gson.toJson(CSVReader.readItems(inputfile));
 			}
 			
 			
-			try (FileWriter file = new FileWriter(path)) {
+			try (FileWriter file = new FileWriter(outputpath)) {
 	            file.write(json);
 	            System.out.println("JSON file written succesfully");
 	        } catch (IOException e) {
@@ -57,11 +57,11 @@ public class DataConverter {
 	
 	/**
 	 * Converts Java Objects to XML Objects and outputs it to a .xml file	
-	 * @param path	The location of the output file
+	 * @param outputpath	The location of the output file
 	 * @param entity The class to be converted
 	 */
 	
-	public static void convertToXML(String path, Object entity) {
+	public static void convertToXML(String inputFile, String outputpath, Object entity) {
 		
 		
 		String XML = "";
@@ -77,16 +77,16 @@ public class DataConverter {
 		try {
 			
 				if (entity == Person.class) {
-					XML = xstream.toXML(CSVReader.readPersons());
+					XML = xstream.toXML(CSVReader.readPersons(inputFile));
 				}
 				else if (entity == Company.class) {
-					XML = xstream.toXML(CSVReader.readCompanies());
+					XML = xstream.toXML(CSVReader.readCompanies(inputFile));
 				}
 				else if (entity == Item.class) {
-					XML = xstream.toXML(CSVReader.readItems());
+					XML = xstream.toXML(CSVReader.readItems(inputFile));
 				}
 				
-				try (FileWriter file = new FileWriter(path)) {
+				try (FileWriter file = new FileWriter(outputpath)) {
 		            file.write(XML);
 		            System.out.println("XML file written succesfully");
 		        } catch (IOException e) {
@@ -101,13 +101,13 @@ public class DataConverter {
 	
 	public static void main(String[] args) throws IOException {
 		
-		convertToJson("output/Persons.json", Person.class);
-		convertToJson("output/Items.json", Item.class);
-		convertToJson("output/Companies.json", Company.class);
+		convertToJson("data/Persons.csv", "output/Persons.json", Person.class);
+		convertToJson("data/Items.csv","output/Items.json", Item.class);
+		convertToJson("data/Companies.csv","output/Companies.json", Company.class);
 		
-		convertToXML("output/Persons.xml", Person.class);
-		convertToXML("output/Items.xml", Item.class);
-		convertToXML("output/Companies.xml", Company.class);
+		convertToXML("data/Persons.csv","output/Persons.xml", Person.class);
+		convertToXML("data/Items.csv", "output/Items.xml", Item.class);
+		convertToXML("data/Companies.csv", "output/Companies.xml", Company.class);
 		
 		
 

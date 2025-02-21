@@ -101,13 +101,13 @@ public class DataConverter {
 	
 	public static void main(String[] args) throws IOException {
 		
-		convertToJson("data/Persons.csv", "output/Persons.json", Person.class);
-		convertToJson("data/Items.csv","output/Items.json", Item.class);
-		convertToJson("data/Companies.csv","output/Companies.json", Company.class);
+		convertToJson("data/Persons.csv", "data/Persons_output.json", Person.class);
+		convertToJson("data/Items.csv","data/Items_output.json", Item.class);
+		convertToJson("data/Companies.csv","data/Companies_output.json", Company.class);
 		
-		convertToXML("data/Persons.csv","output/Persons.xml", Person.class);
-		convertToXML("data/Items.csv", "output/Items.xml", Item.class);
-		convertToXML("data/Companies.csv", "output/Companies.xml", Company.class);
+		convertToXML("data/Persons.csv","data/Persons_output.xml", Person.class);
+		convertToXML("data/Items.csv", "data/Items_output.xml", Item.class);
+		convertToXML("data/Companies.csv", "data/Companies_output.xml", Company.class);
 		
 		}
 

@@ -24,13 +24,13 @@ import static org.junit.jupiter.api.Assertions.assertFalse;
 
 public class DataConversionTest {
 
-	private static final String PERSON_JSON = "testOutput/Persons.json";
-    private static final String ITEM_JSON = "testOutput/Items.json";
-    private static final String COMPANY_JSON = "testOutput/Companies.json";
+	private static final String PERSON_JSON = "data/Persons_test.json";
+    private static final String ITEM_JSON = "data/Items_test.json";
+    private static final String COMPANY_JSON = "data/Companies_test.json";
 
-    private static final String PERSON_XML = "testOutput/Persons.xml";
-    private static final String ITEM_XML = "testOutput/Items.xml";
-    private static final String COMPANY_XML = "testOutput/Companies.xml";
+    private static final String PERSON_XML = "data/Persons_test.xml";
+    private static final String ITEM_XML = "data/Items_test.xml";
+    private static final String COMPANY_XML = "data/Companies_test.xml";
     
     
     @BeforeEach

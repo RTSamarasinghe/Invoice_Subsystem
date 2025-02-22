@@ -44,7 +44,7 @@ public class DataConversionTest {
     @Test
     public void testConvertToJsonPerson() throws IOException {
     	
-    	DataConverter.convertToJson("data/Persons.csv", PERSON_JSON, Person.class);
+    	DataConverter.writeToJSON("data/Persons.csv", PERSON_JSON, Person.class);
 
         
         File jsonFile = new File(PERSON_JSON);
@@ -65,7 +65,7 @@ public class DataConversionTest {
     @Test
     public void testConvertToJsonItem() throws IOException {
    
-         DataConverter.convertToJson("data/Items.csv",ITEM_JSON, Item.class);
+         DataConverter.writeToJSON("data/Items.csv",ITEM_JSON, Item.class);
 
         
         File jsonFile = new File(ITEM_JSON);
@@ -84,7 +84,7 @@ public class DataConversionTest {
     public void testConvertToJsonCompany() throws IOException {
     	
         
-        DataConverter.convertToJson("data/Companies.csv",COMPANY_JSON, Company.class);
+        DataConverter.writeToJSON("data/Companies.csv",COMPANY_JSON, Company.class);
 
         
         File jsonFile = new File(COMPANY_JSON);
@@ -102,7 +102,7 @@ public class DataConversionTest {
     @Test
     public void testConvertToXMLCompany() throws IOException {
        
-        DataConverter.convertToXML("data/Companies.csv",COMPANY_XML, Company.class);
+        DataConverter.writeToXML("data/Companies.csv",COMPANY_XML, Company.class);
      
         File xmlFile = new File(COMPANY_XML);
         assertTrue(xmlFile.exists(), "XML file was not created.");
@@ -120,7 +120,7 @@ public class DataConversionTest {
     @Test
     public void testConvertToXMLItem() throws IOException {
        
-        DataConverter.convertToXML("data/Items.csv",ITEM_XML, Item.class);
+        DataConverter.writeToXML("data/Items.csv",ITEM_XML, Item.class);
      
         File xmlFile = new File(ITEM_XML);
         assertTrue(xmlFile.exists(), "XML file was not created.");
@@ -136,9 +136,9 @@ public class DataConversionTest {
      * Tests CSV to XML conversion for Person data
      */
     @Test
-    public void testConvertToXMLPerson() throws IOException {
+    public void testWriteToXMLPerson() throws IOException {
        
-        DataConverter.convertToXML("data/Persons.csv",PERSON_XML, Person.class);
+        DataConverter.writeToXML("data/Persons.csv",PERSON_XML, Person.class);
      
         File xmlFile = new File(PERSON_XML);
         assertTrue(xmlFile.exists(), "XML file was not created.");

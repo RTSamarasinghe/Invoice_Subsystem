@@ -20,7 +20,7 @@ public class DataConverter {
 	 * @param outputpath	The location of the output file
 	 * @param entity The class to be converted
 	 */
-	public static void convertToJson(String inputfile, String outputpath, Class<?> entity) {
+	public static String convertToJson(String inputfile, Class<?> entity) {
 		
 		String json = "";
 		Gson gson = new GsonBuilder()
@@ -39,19 +39,22 @@ public class DataConverter {
 				json = gson.toJson(CSVReader.readItems(inputfile));
 			}
 			
-			
-			try (FileWriter file = new FileWriter(outputpath)) {
-	            file.write(json);
-	            System.out.println("JSON file for " + entity.getSimpleName() + " written successfully");
-	        } catch (IOException e) {
-	            e.printStackTrace();
-	        }
-			
 		} catch (IOException e) {
 			System.err.println("CSVReader error");
 			e.printStackTrace();
 		}
 		
+		return json;
+		
+	}
+	
+	public static void writeToJSON(String inputPath, String outputpath, Class<?> entity) {
+		try (FileWriter file = new FileWriter(outputpath)) {
+            file.write(convertToJson(inputPath, entity));
+            System.out.println("JSON file for " + entity.getSimpleName() + " written successfully");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
 		
 	}
 	
@@ -61,7 +64,7 @@ public class DataConverter {
 	 * @param entity The class to be converted
 	 */
 	
-	public static void convertToXML(String inputFile, String outputpath, Class<?> entity)  {
+	public static String convertToXML(String inputFile,  Class<?> entity)  {
 		
 		
 		String XML = "";
@@ -86,28 +89,32 @@ public class DataConverter {
 					XML = xstream.toXML(CSVReader.readItems(inputFile));
 				}
 				
-				try (FileWriter file = new FileWriter(outputpath)) {
-		            file.write(XML);
-		            System.out.println("XML file for " + entity.getSimpleName() + " written successfully");
-		        } catch (IOException e) {
-		            e.printStackTrace();
-		        }
-				
 			} catch (IOException e) {
 				System.err.println("CSVReader error");
 				e.printStackTrace();
 			}
+		
+		return XML;
+	}
+	
+	public static void writeToXML(String inputPath, String outputpath, Class<?> entity) {
+		try (FileWriter file = new FileWriter(outputpath)) {
+            file.write(convertToXML(inputPath, entity));
+            System.out.println("XML file for " + entity.getSimpleName() + " written successfully");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
 	}
 	
 	public static void main(String[] args) throws IOException {
 		
-		convertToJson("data/Persons.csv", "data/Persons_output.json", Person.class);
-		convertToJson("data/Items.csv","data/Items_output.json", Item.class);
-		convertToJson("data/Companies.csv","data/Companies_output.json", Company.class);
+		writeToJSON("data/Persons.csv", "data/Persons_output.json", Person.class);
+		writeToJSON("data/Items.csv","data/Items_output.json", Item.class);
+		writeToJSON("data/Companies.csv","data/Companies_output.json", Company.class);
 		
-		convertToXML("data/Persons.csv","data/Persons_output.xml", Person.class);
-		convertToXML("data/Items.csv", "data/Items_output.xml", Item.class);
-		convertToXML("data/Companies.csv", "data/Companies_output.xml", Company.class);
+		writeToXML("data/Persons.csv","data/Persons_output.xml", Person.class);
+		writeToXML("data/Items.csv", "data/Items_output.xml", Item.class);
+		writeToXML("data/Companies.csv", "data/Companies_output.xml", Company.class);
 		
 		}
 

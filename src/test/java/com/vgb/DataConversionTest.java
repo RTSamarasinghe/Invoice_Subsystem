@@ -1,7 +1,12 @@
-package com.vbg;
+package com.vgb;
 
 import org.junit.Test;
 import org.junit.jupiter.api.BeforeEach;
+
+import com.vgb.Company;
+import com.vgb.DataConverter;
+import com.vgb.Item;
+import com.vgb.Person;
 
 import java.io.File;
 import java.io.IOException;
@@ -73,8 +78,8 @@ public class DataConversionTest {
         assertTrue(jsonFile.length() > 0, "JSON file is empty.");
 
         String jsonContent = new String(Files.readAllBytes(Paths.get(ITEM_JSON)));
-        assertTrue(jsonContent.contains("Dragline"), "Expected item name not found in JSON.");
-        assertTrue(jsonContent.contains("DX200b"), "Expected item description not found in JSON.");
+        assertTrue(jsonContent.contains("Excavator"), "Expected item name not found in JSON.");
+        assertTrue(jsonContent.contains("EX900Max"), "Expected item description not found in JSON.");
     }
     
     /**
@@ -128,8 +133,8 @@ public class DataConversionTest {
 
         
         String xmlContent = new String(Files.readAllBytes(Paths.get(ITEM_XML)));
-        assertTrue(xmlContent.contains("Dragline"), "Expected Item name not found in XML.");
-        assertTrue(xmlContent.contains("DX200b"), "Expected Equipment Model number not found in XML.");
+        assertTrue(xmlContent.contains("Excavator"), "Expected Item name not found in XML.");
+        assertTrue(xmlContent.contains("EX900Max"), "Expected Equipment Model number not found in XML.");
     }
     
     /**

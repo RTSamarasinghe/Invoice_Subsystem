@@ -1,4 +1,4 @@
-package com.vbg;
+package com.vgb;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -63,12 +63,5 @@ public class Person {
 	}
 
 
-    @Override
-    public String toString() {
-        return "Person{" +
-                "uuid=" + uuid +
-                ", name='" + getFullName() + '\'' +
-                ", emails=" + emails +
-                '}';
-    }
+  
 }

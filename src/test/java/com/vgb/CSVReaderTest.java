@@ -1,6 +1,14 @@
-package com.vbg;
+package com.vgb;
 
 import org.junit.Test;
+
+import com.vgb.CSVReader;
+import com.vgb.Company;
+import com.vgb.Contract;
+import com.vgb.Equipment;
+import com.vgb.Item;
+import com.vgb.Material;
+import com.vgb.Person;
 
 import java.io.IOException;
 import java.nio.file.Paths;
@@ -86,39 +94,39 @@ public class CSVReaderTest {
 		 
 		 //Testing Equipment Objects from Item list
 		 
-		 assertEquals("2dd5220e-6779-4fe7-81d2-b79dcbff3415", items.get(0).getUuid().toString(), "Item UUID Mismatch");
-		 assertEquals("Dragline", items.get(0).getName(), "Item name mismatch");
+		 assertEquals("f8e3b98d-c022-4ae5-bc7b-8a6055d22946", items.get(0).getUuid().toString(), "Item UUID Mismatch");
+		 assertEquals("Excavator", items.get(0).getName(), "Item name mismatch");
 		 assertTrue(items.get(0) instanceof Equipment, "First object is not an Equipment");
 		 
 		 Equipment equipment = (Equipment)items.get(0);
 		 
 		 assertEquals('E', equipment.getType(), "Equipment Type mismatch");
-		 assertEquals("DX200b", equipment.getModel(), "Equipment model mismatch");
-		 assertEquals(347125, equipment.getPrice(), "Equipment price mismatch");
+		 assertEquals("EX900Max", equipment.getModel(), "Equipment model mismatch");
+		 assertEquals(500000, equipment.getPrice(), "Equipment price mismatch");
 		 
 		 
 		 //Testing Material objects from Item list
 		 
-		 assertEquals("ac47e0f6-5b5b-49fe-af54-a6625a6374a8", items.get(5).getUuid().toString(), "Material UUID Mismatch");
-		 assertEquals("concrete", items.get(5).getName(), "Material name mismatch");
+		 assertEquals("203af499-d40b-4074-85ad-e3fe1416ab7e", items.get(5).getUuid().toString(), "Material UUID Mismatch");
+		 assertEquals("cement", items.get(5).getName(), "Material name mismatch");
 		 assertTrue(items.get(5) instanceof Material, "Fifth object is not a Material");
 		 
 		 Material material = (Material) items.get(5);
 		 
 		 assertEquals('M', material.getType(), "Material Type mismatch"); 
 		 assertEquals("bag", material.getUnit(), "material model mismatch");
-		 assertEquals(40, material.getCostPerUnit(), "Material price mismatch");
+		 assertEquals(50, material.getCostPerUnit(), "Material price mismatch");
 		 
 		 //Testing Contract Objects from Item List
 		 
-		 assertEquals("38bebacb-a3ca-459e-a71f-8e5826a2f7fa", items.get(10).getUuid().toString(), "Contract UUID Mismatch");
-		 assertEquals("foundation pour", items.get(10).getName(), "Contract name mismatch");
+		 assertEquals("7de54c03-db10-44c4-accb-60c260f5cd27", items.get(10).getUuid().toString(), "Contract UUID Mismatch");
+		 assertEquals("road paving", items.get(10).getName(), "Contract name mismatch");
 		 assertTrue(items.get(10) instanceof Contract, "Eleventh object is not a Material");
 		 
 		 Contract contract = (Contract) items.get(10);
 		 
 		 assertEquals('C', contract.getType(), "Material Type mismatch"); 
-		 assertEquals("0673a09a-5cc1-4269-88f2-e665c2f3f33c", contract.getCompanyUuid().toString(), "Contract contact UUID mismatch");
+		 assertEquals("e5250fae-f52a-45be-afe1-c783252daf46", contract.getCompanyUuid().toString(), "Contract contact UUID mismatch");
 		 
 	}
 }

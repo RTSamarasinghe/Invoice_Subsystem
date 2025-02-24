@@ -1,87 +1,108 @@
-<list>
-  <Equipment>
-    <uuid>2dd5220e-6779-4fe7-81d2-b79dcbff3415</uuid>
-    <name>Dragline</name>
-    <model>DX200b</model>
-    <price>347125.0</price>
-  </Equipment>
-  <Equipment>
-    <uuid>4c0c851d-0466-42c8-8631-0b414db5be98</uuid>
-    <name>Bulldozer</name>
-    <model>XPXY4</model>
-    <price>125500.0</price>
-  </Equipment>
-  <Equipment>
-    <uuid>984bac8d-96f7-4d6b-9948-1cabae15ba51</uuid>
-    <name>Compactor</name>
-    <model>FLT100</model>
-    <price>4500.0</price>
-  </Equipment>
-  <Equipment>
-    <uuid>50e6f93f-3792-459f-b1c6-b512b994ff2b</uuid>
-    <name>Dump Truck</name>
-    <model>DUMPRX5000</model>
-    <price>90450.0</price>
-  </Equipment>
-  <Equipment>
-    <uuid>e9afb98d-ac99-4974-a274-2dca5c1238f5</uuid>
-    <name>Skid-Steer</name>
-    <model>S4325</model>
-    <price>8500.0</price>
-  </Equipment>
-  <Material>
-    <uuid>ac47e0f6-5b5b-49fe-af54-a6625a6374a8</uuid>
-    <name>concrete</name>
-    <unit>bag</unit>
-    <costPerUnit>40.0</costPerUnit>
-  </Material>
-  <Material>
-    <uuid>72e157ac-5b46-4b3b-b86b-599a89be7289</uuid>
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+  <row>
+    <uuid>f8e3b98d-c022-4ae5-bc7b-8a6055d22946</uuid>
+    <type>E</type>
+    <name>Excavator</name>
+    <field>EX900Max</field>
+    <FIELD5>500000</FIELD5>
+  </row>
+  <row>
+    <uuid>b6498fed-0ac4-4b7d-9e6e-44daf63548eb</uuid>
+    <type>E</type>
+    <name>Dozer</name>
+    <field>BDX450</field>
+    <FIELD5>210000</FIELD5>
+  </row>
+  <row>
+    <uuid>6f034351-08f7-453f-af58-d3b243c10c79</uuid>
+    <type>E</type>
+    <name>Loader</name>
+    <field>LD700X</field>
+    <FIELD5>125000</FIELD5>
+  </row>
+  <row>
+    <uuid>8f7b84f2-b008-4bdf-9b7b-1f110b24bc56</uuid>
+    <type>E</type>
+    <name>Concrete Mixer</name>
+    <field>CMX200</field>
+    <FIELD5>48000</FIELD5>
+  </row>
+  <row>
+    <uuid>22f79a27-7bc0-4fc8-bea7-13885f6a5494</uuid>
+    <type>E</type>
+    <name>Tower Crane</name>
+    <field>TC750</field>
+    <FIELD5>715000</FIELD5>
+  </row>
+  <row>
+    <uuid>203af499-d40b-4074-85ad-e3fe1416ab7e</uuid>
+    <type>M</type>
+    <name>cement</name>
+    <field>bag</field>
+    <FIELD5>50</FIELD5>
+  </row>
+  <row>
+    <uuid>d59fd0d8-bee7-4ea1-868c-4b7b74e6523a</uuid>
+    <type>M</type>
     <name>sand</name>
-    <unit>ton</unit>
-    <costPerUnit>1500.0</costPerUnit>
-  </Material>
-  <Material>
-    <uuid>97dc9f91-c009-4e8d-b08c-3d4d0ded0bad</uuid>
-    <name>nails</name>
-    <unit>box</unit>
-    <costPerUnit>15.0</costPerUnit>
-  </Material>
-  <Material>
-    <uuid>30bebf58-ba44-4bef-885f-8fccb7db9544</uuid>
-    <name>lumber</name>
-    <unit>lft</unit>
-    <costPerUnit>8.0</costPerUnit>
-  </Material>
-  <Material>
-    <uuid>8c8bbffa-a939-44f4-98b7-66837e7d16e9</uuid>
-    <name>drywall</name>
-    <unit>sheet</unit>
-    <costPerUnit>35.0</costPerUnit>
-  </Material>
-  <Contract>
-    <uuid>38bebacb-a3ca-459e-a71f-8e5826a2f7fa</uuid>
-    <name>foundation pour</name>
-    <companyUuid>0673a09a-5cc1-4269-88f2-e665c2f3f33c</companyUuid>
-  </Contract>
-  <Contract>
-    <uuid>699607c3-d9db-4aef-a8ab-b3a6cab21e12</uuid>
-    <name>footing pour</name>
-    <companyUuid>0673a09a-5cc1-4269-88f2-e665c2f3f33c</companyUuid>
-  </Contract>
-  <Contract>
-    <uuid>ce9fc7f6-8be8-48cb-9236-7873dbf9b2b7</uuid>
-    <name>concrete pad pour</name>
-    <companyUuid>0673a09a-5cc1-4269-88f2-e665c2f3f33c</companyUuid>
-  </Contract>
-  <Contract>
-    <uuid>97ee84b8-dc93-4db2-84bd-48e72a7f3131</uuid>
-    <name>electric install</name>
-    <companyUuid>a8bae950-96ac-43a9-9a29-729db552e981</companyUuid>
-  </Contract>
-  <Contract>
-    <uuid>b118fa82-14cf-46f4-8574-41e583badc27</uuid>
-    <name>generator install</name>
-    <companyUuid>a8bae950-96ac-43a9-9a29-729db552e981</companyUuid>
-  </Contract>
-</list>
+    <field>cubic yard</field>
+    <FIELD5>1200</FIELD5>
+  </row>
+  <row>
+    <uuid>305c301b-1509-464b-8d21-999a33d2b2f4</uuid>
+    <type>M</type>
+    <name>rebar</name>
+    <field>ton</field>
+    <FIELD5>2500</FIELD5>
+  </row>
+  <row>
+    <uuid>b71e0b07-b1f8-4e8c-9036-542a61b41645</uuid>
+    <type>M</type>
+    <name>plywood</name>
+    <field>sheet</field>
+    <FIELD5>45</FIELD5>
+  </row>
+  <row>
+    <uuid>b9d43327-2153-41d7-8d5e-09f5f66cb071</uuid>
+    <type>M</type>
+    <name>asphalt</name>
+    <field>ton</field>
+    <FIELD5>320</FIELD5>
+  </row>
+  <row>
+    <uuid>7de54c03-db10-44c4-accb-60c260f5cd27</uuid>
+    <type>C</type>
+    <name>road paving</name>
+    <field>e5250fae-f52a-45be-afe1-c783252daf46</field>
+    <FIELD5></FIELD5>
+  </row>
+  <row>
+    <uuid>cfa5ba4f-fe6b-403f-a5e2-e269ad165581</uuid>
+    <type>C</type>
+    <name>bridge construction</name>
+    <field>a5421418-2f20-4e97-8648-454da9db9f0f</field>
+    <FIELD5></FIELD5>
+  </row>
+  <row>
+    <uuid>024e0fd0-4ab1-41dc-be64-5a33670fb0f0</uuid>
+    <type>C</type>
+    <name>tunnel excavation</name>
+    <field>adb220f5-4cfb-49a8-93ee-32e6e3e5a5fb</field>
+    <FIELD5></FIELD5>
+  </row>
+  <row>
+    <uuid>ab303881-f939-4020-97f0-571cd7f5a9a0</uuid>
+    <type>C</type>
+    <name>dam reinforcement</name>
+    <field>8d7b6342-b7aa-40f3-b071-f3e6f123fea9</field>
+    <FIELD5></FIELD5>
+  </row>
+  <row>
+    <uuid>5bf80b28-663b-4e94-9f3e-92487773ca37</uuid>
+    <type>C</type>
+    <name>high-rise foundation</name>
+    <field>2f755538-60d6-4349-b9db-8d2b4ec3f0f0</field>
+    <FIELD5></FIELD5>
+  </row>
+</root>

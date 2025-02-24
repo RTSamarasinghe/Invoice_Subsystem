@@ -1,4 +1,4 @@
-package com.vbg;
+package com.vgb;
 
 import java.awt.ItemSelectable;
 import java.io.FileWriter;
@@ -8,7 +8,7 @@ import java.util.List;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.thoughtworks.xstream.XStream;
-import com.vbg.CSVReader;
+import com.vgb.CSVReader;
 
 /*
  * Outputs .json and .xml files parsed in as List objects.
@@ -115,6 +115,8 @@ public class DataConverter {
 		writeToXML("data/Persons.csv","data/Persons_output.xml", Person.class);
 		writeToXML("data/Items.csv", "data/Items_output.xml", Item.class);
 		writeToXML("data/Companies.csv", "data/Companies_output.xml", Company.class);
+		
+		
 		
 		}
 

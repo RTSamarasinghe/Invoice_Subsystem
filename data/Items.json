@@ -1,87 +1,107 @@
 [
-  {
-    "model": "DX200b",
-    "price": 347125.0,
-    "uuid": "2dd5220e-6779-4fe7-81d2-b79dcbff3415",
-    "name": "Dragline"
-  },
-  {
-    "model": "XPXY4",
-    "price": 125500.0,
-    "uuid": "4c0c851d-0466-42c8-8631-0b414db5be98",
-    "name": "Bulldozer"
-  },
-  {
-    "model": "FLT100",
-    "price": 4500.0,
-    "uuid": "984bac8d-96f7-4d6b-9948-1cabae15ba51",
-    "name": "Compactor"
-  },
-  {
-    "model": "DUMPRX5000",
-    "price": 90450.0,
-    "uuid": "50e6f93f-3792-459f-b1c6-b512b994ff2b",
-    "name": "Dump Truck"
-  },
-  {
-    "model": "S4325",
-    "price": 8500.0,
-    "uuid": "e9afb98d-ac99-4974-a274-2dca5c1238f5",
-    "name": "Skid-Steer"
-  },
-  {
-    "unit": "bag",
-    "costPerUnit": 40.0,
-    "uuid": "ac47e0f6-5b5b-49fe-af54-a6625a6374a8",
-    "name": "concrete"
-  },
-  {
-    "unit": "ton",
-    "costPerUnit": 1500.0,
-    "uuid": "72e157ac-5b46-4b3b-b86b-599a89be7289",
-    "name": "sand"
-  },
-  {
-    "unit": "box",
-    "costPerUnit": 15.0,
-    "uuid": "97dc9f91-c009-4e8d-b08c-3d4d0ded0bad",
-    "name": "nails"
-  },
-  {
-    "unit": "lft",
-    "costPerUnit": 8.0,
-    "uuid": "30bebf58-ba44-4bef-885f-8fccb7db9544",
-    "name": "lumber"
-  },
-  {
-    "unit": "sheet",
-    "costPerUnit": 35.0,
-    "uuid": "8c8bbffa-a939-44f4-98b7-66837e7d16e9",
-    "name": "drywall"
-  },
-  {
-    "companyUuid": "0673a09a-5cc1-4269-88f2-e665c2f3f33c",
-    "uuid": "38bebacb-a3ca-459e-a71f-8e5826a2f7fa",
-    "name": "foundation pour"
-  },
-  {
-    "companyUuid": "0673a09a-5cc1-4269-88f2-e665c2f3f33c",
-    "uuid": "699607c3-d9db-4aef-a8ab-b3a6cab21e12",
-    "name": "footing pour"
-  },
-  {
-    "companyUuid": "0673a09a-5cc1-4269-88f2-e665c2f3f33c",
-    "uuid": "ce9fc7f6-8be8-48cb-9236-7873dbf9b2b7",
-    "name": "concrete pad pour"
-  },
-  {
-    "companyUuid": "a8bae950-96ac-43a9-9a29-729db552e981",
-    "uuid": "97ee84b8-dc93-4db2-84bd-48e72a7f3131",
-    "name": "electric install"
-  },
-  {
-    "companyUuid": "a8bae950-96ac-43a9-9a29-729db552e981",
-    "uuid": "b118fa82-14cf-46f4-8574-41e583badc27",
-    "name": "generator install"
-  }
+ {
+   "uuid": "f8e3b98d-c022-4ae5-bc7b-8a6055d22946",
+   "type": "E",
+   "name": "Excavator",
+   "field": "EX900Max",
+   "FIELD5": 500000
+ },
+ {
+   "uuid": "b6498fed-0ac4-4b7d-9e6e-44daf63548eb",
+   "type": "E",
+   "name": "Dozer",
+   "field": "BDX450",
+   "FIELD5": 210000
+ },
+ {
+   "uuid": "6f034351-08f7-453f-af58-d3b243c10c79",
+   "type": "E",
+   "name": "Loader",
+   "field": "LD700X",
+   "FIELD5": 125000
+ },
+ {
+   "uuid": "8f7b84f2-b008-4bdf-9b7b-1f110b24bc56",
+   "type": "E",
+   "name": "Concrete Mixer",
+   "field": "CMX200",
+   "FIELD5": 48000
+ },
+ {
+   "uuid": "22f79a27-7bc0-4fc8-bea7-13885f6a5494",
+   "type": "E",
+   "name": "Tower Crane",
+   "field": "TC750",
+   "FIELD5": 715000
+ },
+ {
+   "uuid": "203af499-d40b-4074-85ad-e3fe1416ab7e",
+   "type": "M",
+   "name": "cement",
+   "field": "bag",
+   "FIELD5": 50
+ },
+ {
+   "uuid": "d59fd0d8-bee7-4ea1-868c-4b7b74e6523a",
+   "type": "M",
+   "name": "sand",
+   "field": "cubic yard",
+   "FIELD5": 1200
+ },
+ {
+   "uuid": "305c301b-1509-464b-8d21-999a33d2b2f4",
+   "type": "M",
+   "name": "rebar",
+   "field": "ton",
+   "FIELD5": 2500
+ },
+ {
+   "uuid": "b71e0b07-b1f8-4e8c-9036-542a61b41645",
+   "type": "M",
+   "name": "plywood",
+   "field": "sheet",
+   "FIELD5": 45
+ },
+ {
+   "uuid": "b9d43327-2153-41d7-8d5e-09f5f66cb071",
+   "type": "M",
+   "name": "asphalt",
+   "field": "ton",
+   "FIELD5": 320
+ },
+ {
+   "uuid": "7de54c03-db10-44c4-accb-60c260f5cd27",
+   "type": "C",
+   "name": "road paving",
+   "field": "e5250fae-f52a-45be-afe1-c783252daf46",
+   "FIELD5": null
+ },
+ {
+   "uuid": "cfa5ba4f-fe6b-403f-a5e2-e269ad165581",
+   "type": "C",
+   "name": "bridge construction",
+   "field": "a5421418-2f20-4e97-8648-454da9db9f0f",
+   "FIELD5": null
+ },
+ {
+   "uuid": "024e0fd0-4ab1-41dc-be64-5a33670fb0f0",
+   "type": "C",
+   "name": "tunnel excavation",
+   "field": "adb220f5-4cfb-49a8-93ee-32e6e3e5a5fb",
+   "FIELD5": null
+ },
+ {
+   "uuid": "ab303881-f939-4020-97f0-571cd7f5a9a0",
+   "type": "C",
+   "name": "dam reinforcement",
+   "field": "8d7b6342-b7aa-40f3-b071-f3e6f123fea9",
+   "FIELD5": null
+ },
+ {
+   "uuid": "5bf80b28-663b-4e94-9f3e-92487773ca37",
+   "type": "C",
+   "name": "high-rise foundation",
+   "field": "2f755538-60d6-4349-b9db-8d2b4ec3f0f0",
+   "FIELD5": null
+ }
 ]

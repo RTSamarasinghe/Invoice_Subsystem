@@ -1,4 +1,4 @@
-package com.vbg;
+package com.vgb;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
@@ -29,9 +29,15 @@ public class CSVReader {
             
             String line;
             while ((line = reader.readLine()) != null) {
-                String[] parts = parseCsvLine(line);
+            	String parts[] = line.split(",");
+            	
+            	String uuidstr = parts[0].trim().replaceAll("[\"]", "");
+            	UUID uuid = UUID.fromString(uuidstr);
+                if (uuidstr.isEmpty()) {
+                    throw new IllegalArgumentException("Missing UUID in CSV: " + Arrays.toString(parts));
+                }
+                                
                 
-                UUID uuid = UUID.fromString(parts[0]);
                 String firstName = parts[1];
                 String lastName = parts[2];
                 String phone = parts[3];
@@ -40,7 +46,7 @@ public class CSVReader {
                 List<String> emails = new ArrayList<>();
                 for (int i = 4; i < parts.length; i++) {
                     if (!parts[i].trim().isEmpty()) {
-                        emails.add(parts[i]);
+                        emails.add(parts[i].trim());
                     }
                 }
                 
@@ -67,11 +73,11 @@ public class CSVReader {
             
             String line;
             while ((line = reader.readLine()) != null) {
-                String[] parts = parseCsvLine(line);
+            	 String parts[] = line.split(",");
                 
                 
-                UUID companyUuid = UUID.fromString(parts[0]);
-                UUID contactUuid = UUID.fromString(parts[1]);
+                UUID companyUuid = UUID.fromString(parts[0].trim());
+                UUID contactUuid = UUID.fromString(parts[1].trim());
                 String name = parts[2];
                 String street = parts[3];
                 String city = parts[4];
@@ -97,14 +103,26 @@ public class CSVReader {
         List<Item> items = new ArrayList<>();
         
         try (BufferedReader reader = new BufferedReader(new FileReader(path))) {
-            // Skip header
+            
             reader.readLine();
             
             String line;
             while ((line = reader.readLine()) != null) {
-                String[] parts = parseCsvLine(line);
+                String parts[] = line.split(",");
                 
-                UUID uuid = UUID.fromString(parts[0]);
+                String uuidstr = parts[0].trim();
+                
+                if (uuidstr.isEmpty()) {
+                    throw new IllegalArgumentException("Missing UUID in CSV: " + Arrays.toString(parts));
+                }
+                
+                try {
+                    UUID uuid = UUID.fromString(uuidstr);
+                } catch (IllegalArgumentException e) {
+                    throw new IllegalArgumentException("Invalid UUID format: " + uuidstr);
+                }
+                
+                UUID uuid = UUID.fromString(parts[0].trim());
                 char type = parts[1].charAt(0);
                 String name = parts[2];
                 
@@ -120,7 +138,7 @@ public class CSVReader {
                         items.add(new Material(uuid, name, unit, costPerUnit));
                         break;
                     case 'C':
-                        UUID companyUuid = UUID.fromString(parts[3]);
+                        UUID companyUuid = UUID.fromString(parts[3].trim());
                         items.add(new Contract(uuid, name, companyUuid));
                         break;
                     default:
@@ -128,35 +146,16 @@ public class CSVReader {
                 }
             }
         }
-        
         return items;
     }
     
-    /**
-     * Parses a CSV line, handling potential commas within fields.
-     * 
-     * @param line The CSV line to parse
-     * @return Array of field values
-     */
-    private static String[] parseCsvLine(String line) {
-        List<String> result = new ArrayList<>();
-        StringBuilder field = new StringBuilder();
-        boolean inQuotes = false;
-        
-        for (char c : line.toCharArray()) {
-            if (c == '"') {
-                inQuotes = !inQuotes;
-            } else if (c == ',' && !inQuotes) {
-                result.add(field.toString());
-                field = new StringBuilder();
-            } else {
-                field.append(c);
-            }
-        }
-        
-        // Add the last field
-        result.add(field.toString());
-        
-        return result.toArray(new String[0]);
-    }
+    
+public static void main(String[] args) throws IOException {
+		
+	System.out.println(readPersons("data/Persons.csv"));
+		
+		
+		
+		}
+  
 }

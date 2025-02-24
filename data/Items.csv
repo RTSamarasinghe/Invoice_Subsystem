@@ -1,16 +1,16 @@
 uuid,type,name,field
-2dd5220e-6779-4fe7-81d2-b79dcbff3415,E,Dragline,DX200b,347125
-4c0c851d-0466-42c8-8631-0b414db5be98,E,Bulldozer,XPXY4,125500
-984bac8d-96f7-4d6b-9948-1cabae15ba51,E,Compactor,FLT100,4500
-50e6f93f-3792-459f-b1c6-b512b994ff2b,E,Dump Truck,DUMPRX5000,90450
-e9afb98d-ac99-4974-a274-2dca5c1238f5,E,Skid-Steer,S4325,8500
-ac47e0f6-5b5b-49fe-af54-a6625a6374a8,M,concrete,bag,40
-72e157ac-5b46-4b3b-b86b-599a89be7289,M,sand,ton,1500
-97dc9f91-c009-4e8d-b08c-3d4d0ded0bad,M,nails,box,15
-30bebf58-ba44-4bef-885f-8fccb7db9544,M,lumber,lft,8
-8c8bbffa-a939-44f4-98b7-66837e7d16e9,M,drywall,sheet,35
-38bebacb-a3ca-459e-a71f-8e5826a2f7fa,C,foundation pour,0673a09a-5cc1-4269-88f2-e665c2f3f33c
-699607c3-d9db-4aef-a8ab-b3a6cab21e12,C,footing pour,0673a09a-5cc1-4269-88f2-e665c2f3f33c
-ce9fc7f6-8be8-48cb-9236-7873dbf9b2b7,C,concrete pad pour,0673a09a-5cc1-4269-88f2-e665c2f3f33c
-97ee84b8-dc93-4db2-84bd-48e72a7f3131,C,electric install,a8bae950-96ac-43a9-9a29-729db552e981
-b118fa82-14cf-46f4-8574-41e583badc27,C,generator install,a8bae950-96ac-43a9-9a29-729db552e981
+f8e3b98d-c022-4ae5-bc7b-8a6055d22946,E,Excavator,EX900Max,500000
+b6498fed-0ac4-4b7d-9e6e-44daf63548eb,E,Dozer,BDX450,210000
+6f034351-08f7-453f-af58-d3b243c10c79,E,Loader,LD700X,125000
+8f7b84f2-b008-4bdf-9b7b-1f110b24bc56,E,Concrete Mixer,CMX200,48000
+22f79a27-7bc0-4fc8-bea7-13885f6a5494,E,Tower Crane,TC750,715000
+203af499-d40b-4074-85ad-e3fe1416ab7e,M,cement,bag,50
+d59fd0d8-bee7-4ea1-868c-4b7b74e6523a,M,sand,cubic yard,1200
+305c301b-1509-464b-8d21-999a33d2b2f4,M,rebar,ton,2500
+b71e0b07-b1f8-4e8c-9036-542a61b41645,M,plywood,sheet,45
+b9d43327-2153-41d7-8d5e-09f5f66cb071,M,asphalt,ton,320
+7de54c03-db10-44c4-accb-60c260f5cd27,C,road paving,e5250fae-f52a-45be-afe1-c783252daf46,
+cfa5ba4f-fe6b-403f-a5e2-e269ad165581,C,bridge construction,a5421418-2f20-4e97-8648-454da9db9f0f,
+024e0fd0-4ab1-41dc-be64-5a33670fb0f0,C,tunnel excavation,adb220f5-4cfb-49a8-93ee-32e6e3e5a5fb,
+ab303881-f939-4020-97f0-571cd7f5a9a0,C,dam reinforcement,8d7b6342-b7aa-40f3-b071-f3e6f123fea9,
+5bf80b28-663b-4e94-9f3e-92487773ca37,C,high-rise foundation,2f755538-60d6-4349-b9db-8d2b4ec3f0f0,

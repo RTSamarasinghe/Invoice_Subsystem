@@ -7,75 +7,43 @@ import java.util.UUID;
  * Contains company information such as name, address, and contact person.
  */
 public class Company {
+	private String name;
     private final UUID companyUuid;
-    private final UUID contactUuid;
-    private final String name;
-    private final String street;
-    private final String city;
-    private final String state;
-    private final String zip;
+    private Person contactPerson;
+    private Address address;
+    
 
     /**
      * Constructs a Company with the given attributes
      * 
      * @param companyUuid The UUID of the company
-     * @param contactUuid The UUID of the contact person
+     * @param contactPerson The UUID of the contact person
      * @param name        The name of the company
-     * @param street      The street address of the company
-     * @param city        The city of the company's address
-     * @param state       The state of the company's address
-     * @param zip         The ZIP code of the company's address
      */
     
-    public Company(UUID companyUuid, UUID contactUuid, String name,
-                   String street, String city, String state, String zip) {
+    public Company(String name, UUID companyUuid, Person person, Address address) {
+    	this.name = name;
         this.companyUuid = companyUuid;
-        this.contactUuid = contactUuid;
-        this.name = name;
-        this.street = street;
-        this.city = city;
-        this.state = state;
-        this.zip = zip;
+        this.contactPerson = person;
+        this.address = address;
     }
 
     
     public UUID getCompanyUuid() {
-        return companyUuid;
+        return this.companyUuid;
     }
 
     
     public UUID getContactUuid() {
-        return contactUuid;
+        return this.contactPerson.getUuid();
     }
-
+    
+    public Address getAddress() {
+    	return this.address;
+    }
     
     public String getName() {
-        return name;
-    }
-
-    
-    public String getFullAddress() {
-        return street + ", " + city + ", " + state + ", " + zip;
-    }
-
-    
-    public String getStreet() {
-        return street;
-    }
-
-    
-    public String getCity() {
-        return city;
-    }
-
-   
-    public String getState() {
-        return state;
-    }
-
-    
-    public String getZip() {
-        return zip;
+        return this.name;
     }
 
     @Override
@@ -83,8 +51,8 @@ public class Company {
         return "Company{" +
                 "companyUuid=" + companyUuid +
                 ", name='" + name + '\'' +
-                ", address='" + getFullAddress() + '\'' +
-                ", contactUuid=" + contactUuid +
+                ", address='" + address.getFullAddress() + '\'' +
+                ", contactUuid=" + contactPerson +
                 '}';
     }
 }

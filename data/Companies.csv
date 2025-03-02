@@ -1,11 +1,11 @@
-companyUUID,contactUUID,name,street,city,state,zip
-5119aca1-1b5b-4ce9-ba85-4a4ed392ddc3,663dd1b7-926c-4a8c-86d6-3134173c0ce5,Voonix,4 Grim Junction,Durham,NC,27710
-536654c6-72d5-4133-8641-30c73571ccb6,55a430da-ad06-426d-80b2-989e43196efe,Plajo,13458 Bultman Park,Wichita,KS,67230
-7d8191cb-1c7e-4bcd-a965-19ecc5d274ab,1573abde-d51d-4030-9d72-2219d8ada01e,Babbleset,23 Crowley Plaza,Oklahoma City,OK,73109
-b433e8e3-ea96-4376-9b08-3a4534fdece7,6281ef7f-6eff-46a2-a394-0a86ed1d2115,Meemm,5 Redwing Pass,Atlanta,GA,30386
-d1bdd06c-5d6d-4899-8e99-abaec8cda2dd,6c9499bc-393a-4b67-909a-aa343785e42b,Trunyx,1 Heffernan Center,Charlotte,NC,28284
-4eaba6c5-b7b9-48f0-a9c5-5baed124f35f,c50893f2-ed7c-409c-aa7c-3c1e4812dae2,Ntags,57838 Duke Center,Irvine,CA,92619
-24722a37-1d26-48db-bcd6-fde64feed2d5,f99bb536-0f8f-4161-8276-c5b72add2002,Aimbu,4 Erie Trail,Cincinnati,OH,45203
-8e04dbd4-8371-4b52-b017-29e56c299d5b,c121c727-3d64-4d56-9909-937ca3cb3ae4,Photospace,24 Kipling Lane,Ocala,FL,34474
-ea884d7c-1ed0-43fe-858e-cfc91c5c33da,4b3f5041-03a2-4e4e-80dd-25263f6c5cee,Thoughtblab,5 Calypso Drive,Fullerton,CA,92640
-856f3149-395b-4f08-acbf-c69a7dd102a5,2253803b-6330-452e-8901-f15e2cd8839a,Skalith,91 Main Center,Sioux Falls,SD,57188
+companyUuid,contactUuid,name,street,city,state,zip
+11efd8b7-3ddf-4884-bda4-91b9b8a6045d,db0c8f6e-6754-43bd-957a-56e25db4bf58,Thoughtworks,38 Ridge Oak Road,Buffalo,NY,14269
+a4f373f0-9dd0-46b0-a69b-55bdeae4a4a2,8793e2b8-eba2-415d-ae42-039e989e17d2,Quamba,56 Mayer Circle,New York City,NY,10099
+475f9b47-2cf0-498a-9dbf-040461e0f305,d3c4e070-2e9f-4bd1-8dd5-ace6963f4e76,Digitube,33 Mallard Point,Anaheim,CA,92825
+ca49d76e-fb80-4f56-998c-bfae585082f6,11d4f2a3-7b10-41e1-a432-f5c85015bd71,Edgeclub,545 Michigan Court,Minneapolis,MN,55441
+9e5798db-f03c-4e6f-8a43-9f195864f2cb,0fa90d33-366f-48e2-bf35-1a979f3133c4,Snaptags,5 Golf Course Avenue,Omaha,NE,68164
+1d30a64b-8595-4e70-9885-37ba844ecec5,cedd1ab7-65aa-422a-9e3a-988dfdd69850,Jaxworks,6875 Crownhardt Point,Independence,MO,64054
+0cab815e-0e4a-4e77-ad6c-3ae296734bd1,94953e67-59de-4dd9-997e-f26a11f1bc47,Mynte,3 East Avenue,Washington,DC,20420
+676f975a-bc3c-459c-a351-05912df5805c,33570a60-102c-456d-9fdb-ff21584ae2fa,Jaxbean,18 Maywood Lane,Elizabeth,NJ,07208
+a3dd6e05-374f-4d22-8f85-7a94cb0548f7,b0e0bde5-37ad-4e5a-98b4-0858b5a1a1f4,Podcat,67580 Fairfield Park,Spartanburg,SC,29319
+965c71ca-77c3-49a8-9f0c-5aa61630e417,e6fd450d-9c21-44c3-8c5a-e788243768a5,Bluejam,6 Forest Dale Terrace,Akron,OH,44329

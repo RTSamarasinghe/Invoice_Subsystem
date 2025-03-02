@@ -33,10 +33,12 @@ public class DataConverter {
 				json = gson.toJson(CSVReader.readPersons(inputfile));
 			}
 			else if (entity == Company.class) {
-				json = gson.toJson(CSVReader.readCompanies(inputfile));
+				json = gson.toJson(CSVReader.readCompanies(inputfile,CSVReader.readPersons("data/Persons.csv")));
 			}
 			else if (entity == Item.class) {
-				json = gson.toJson(CSVReader.readItems(inputfile));
+				json = gson.toJson(CSVReader.readItems(inputfile,CSVReader.readCompanies(
+						"data/Companies.csv", 
+						CSVReader.readPersons("data/Persons.csv"))));
 			}
 			
 		} catch (IOException e) {
@@ -83,10 +85,11 @@ public class DataConverter {
 					XML = xstream.toXML(CSVReader.readPersons(inputFile));
 				}
 				else if (entity == Company.class) {
-					XML = xstream.toXML(CSVReader.readCompanies(inputFile));
+					XML = xstream.toXML(CSVReader.readCompanies(inputFile, CSVReader.readPersons("data/Persons.csv")));
 				}
 				else if (entity == Item.class) {
-					XML = xstream.toXML(CSVReader.readItems(inputFile));
+					XML = xstream.toXML(CSVReader.readItems(inputFile, CSVReader.readCompanies("data/Companies.csv", 
+							CSVReader.readPersons("data/Persons.csv"))));
 				}
 				
 			} catch (IOException e) {

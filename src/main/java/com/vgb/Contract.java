@@ -6,7 +6,7 @@ import java.util.UUID;
  * Represents a contract available in the system.
  */
 public class Contract extends Item {
-    private final UUID companyUuid;
+    private final Company companyUuid;
 
     /**
      * Constructs a Contract item with the given attributes
@@ -16,7 +16,7 @@ public class Contract extends Item {
      * @param companyUuid The UUID of the company that VGB subcontracts with
      */
    
-    public Contract(UUID uuid, String name, UUID companyUuid) {
+    public Contract(UUID uuid, String name, Company companyUuid) {
         super(uuid, name);
         this.companyUuid = companyUuid;
     }
@@ -28,7 +28,7 @@ public class Contract extends Item {
 
     
     public UUID getCompanyUuid() {
-        return companyUuid;
+        return companyUuid.getCompanyUuid();
     }
 
     @Override

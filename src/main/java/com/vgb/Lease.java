@@ -3,12 +3,15 @@ package com.vgb;
 import java.time.LocalDate;
 import java.time.temporal.ChronoUnit;
 
-public class Lease extends Agreement {
+public class Lease extends Agreement implements Taxable {
 
 	Equipment equipment;
 	LocalDate startDate;
 	LocalDate endDate;
 	
+	
+	private double tax;
+	private static final double FLAT_TAX = 1500.00;
 	
 	public Lease(Equipment equipment, LocalDate startDate, LocalDate endDate) {
 		super(equipment);
@@ -21,9 +24,22 @@ public class Lease extends Agreement {
 	public double calculateAgreement() {
 		long days = ChronoUnit.DAYS.between(startDate, endDate) + 1; 
         double years = days / 365.0;
-        return (years / 5) * equipment.getPrice() * 1.5;
+        return Math.round((years / 5) * equipment.getPrice() * 1.5);
 	}
-	
+
+
+	@Override
+	public double calculateTax() {
+		if (calculateAgreement() > 12500.00) {
+			tax = FLAT_TAX;
+		}
+		return tax;
+	}
+
+
+	public double getTax() {
+		return tax;
+	}
 	
 	
 	

@@ -1,47 +1,25 @@
 package com.vgb;
 
-import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.temporal.ChronoUnit;
 
-/**
- * Contains all the methods for calculating rental
- * Used by Equipment
- */
-public class Rental implements Transaction{
+public class Rental extends Agreement {
 
-	LocalDate hours;
-	double basePrice;
-	double taxRate;
+	Equipment equipment;
+	private LocalDateTime startTime;
+    private LocalDateTime endTime;
 	
-	
-	
-	public Rental(LocalDate hours, double basePrice, double taxRate) {
-		this.hours = hours;
-		this.basePrice = basePrice;
-		this.taxRate = taxRate;
-	}
-	
-	public LocalDate getHours() {
-		return hours;
-	}
-
-	public double getBasePrice() {
-		return basePrice;
-	}
-
-	public double getTaxRate() {
-		return taxRate;
+	public Rental(Equipment equipment, LocalDateTime startTime, LocalDateTime endTime) {
+		super(equipment);
+		this.startTime = startTime;
+		this.endTime = endTime;
+		
 	}
 
 	@Override
-	public LocalDate getPeriod(LocalDate days) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public double calculateTotal() {
-		// TODO Auto-generated method stub
-		return 0;
+	public double calculateAgreement() {
+		long hours = ChronoUnit.HOURS.between(startTime, endTime);
+		return (equipment.getPrice() * 0.001) * hours;
 	}
 
 }

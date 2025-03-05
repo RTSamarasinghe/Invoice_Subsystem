@@ -1,54 +1,30 @@
 package com.vgb;
 
 import java.time.LocalDate;
+import java.time.temporal.ChronoUnit;
 
-/*
- * Contains methods to calculate Lease
- * Used by Equipment Class
- * 
- */
+public class Lease extends Agreement {
 
-public class Lease implements Transaction{
+	Equipment equipment;
+	LocalDate startDate;
+	LocalDate endDate;
 	
-	LocalDate days;
-	double basePrice;
-	double markUpPrice;
 	
-	public Lease(LocalDate days, double basePrice, double markUpPrice) {
-		this.days = days;
-		this.basePrice = basePrice;
-		this.markUpPrice = markUpPrice;
+	public Lease(Equipment equipment, LocalDate startDate, LocalDate endDate) {
+		super(equipment);
+		this.startDate = startDate;
+		this.endDate = endDate;
 	}
 
-	
-	
-	@Override
-	public LocalDate getPeriod(LocalDate days) {
-		// TODO Auto-generated method stub
-		return null;
-	}
 
 	@Override
-	public double calculateTotal() {
-		// TODO Auto-generated method stub
-		return 0;
+	public double calculateAgreement() {
+		long days = ChronoUnit.DAYS.between(startDate, endDate) + 1; 
+        double years = days / 365.0;
+        return (years / 5) * equipment.getPrice() * 1.5;
 	}
 	
-	public LocalDate getDays() {
-		return days;
-	}
-
-
-
-	public double getBasePrice() {
-		return basePrice;
-	}
-
-
-
-	public double getMarkUpPrice() {
-		return markUpPrice;
-	}
 	
-
+	
+	
 }

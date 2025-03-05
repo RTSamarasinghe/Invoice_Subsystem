@@ -35,12 +35,13 @@ public abstract class Item {
    
     public abstract char getType();
     
+    public abstract double calculateTotal();
+    
     @Override
     public String toString() {
-        return "Item{" +
-                "uuid=" + uuid +
-                ", name='" + name + '\'' +
-                ", type=" + getType() +
-                '}';
-    }
+        return "Item: " + '\n' +
+                "(" + uuid + ")" +
+                ",'" + name + '\n' +
+                ", " + getType();
+    	}
 }

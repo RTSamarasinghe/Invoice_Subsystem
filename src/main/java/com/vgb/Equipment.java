@@ -5,10 +5,10 @@ import java.util.UUID;
 /**
  * Represents equipment available in the system.
  */
-public class Equipment extends Item {
+public class Equipment extends Item implements Taxable {
     private final String model;
     private final double price;
-
+    private final static double TAX_RATE = 0.525;
     /**
      * Constructs an Equipment item with the given attributes
      * 
@@ -41,11 +41,20 @@ public class Equipment extends Item {
 
     @Override
     public String toString() {
-        return "Equipment{" +
-                "uuid=" + getUuid() +
-                ", name='" + getName() + '\'' +
-                ", model='" + model + '\'' +
-                ", price=" + price +
-                '}';
+        return "Equipment:" +
+                "(" + getUuid() + ")" + '\n'+
+                 getName() + '\n' +
+                ",'" + model + '\'' +
+                ",$" + price;
     }
+
+	@Override
+	public double calculateTotal() {
+		return this.price;
+	}
+
+	@Override
+	public double calculateTax() {		
+		return this.price * TAX_RATE;
+	}
 }

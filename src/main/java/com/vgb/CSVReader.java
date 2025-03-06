@@ -3,6 +3,8 @@ package com.vgb;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
@@ -177,11 +179,24 @@ public class CSVReader {
     
     
 public static void main(String[] args) throws IOException {
+		//Debugging
+	
+		Equipment x = new Equipment(UUID.fromString("7af2d8f9-d09e-4992-a41d-3bec9ed2aa31"), "balls", "XXXX", 95125);
+		LocalDate startDate = LocalDate.parse("2024-01-01");
+		LocalDate endDate = LocalDate.parse("2026-06-01");
+
+		LocalDateTime startTime = LocalDateTime.parse("2024-01-01T10:15:30");
+		LocalDateTime endTime = LocalDateTime.parse("2024-01-02T11:15:30");
+
+	
+		AgreementFactory leaseFactory = new LeaseFactory();
+		Agreement lease = leaseFactory.createAgreement(x, startDate, endDate);
 		
-		System.out.println(readPersons("data/Persons.csv"));
-		System.out.println(readCompanies("data/Companies.csv", readPersons("data/Persons.csv")));
+		AgreementFactory rentalFactory = new RentalFactory();
+		Agreement rental = rentalFactory.createAgreement(x,startTime , endTime);
 		
-		
+		System.out.println(lease.calculateTotal());	
+		System.out.println(rental.calculateTotal());
 		}
   
 }

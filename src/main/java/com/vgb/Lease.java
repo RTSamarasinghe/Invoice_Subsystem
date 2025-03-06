@@ -10,11 +10,12 @@ public class Lease extends Agreement implements Taxable {
 	LocalDate endDate;
 	
 	
+	private double agreement_value;
 	private double tax;
 	private static final double FLAT_TAX = 1500.00;
 	
 	public Lease(Equipment equipment, LocalDate startDate, LocalDate endDate) {
-		super(equipment);
+		this.equipment = equipment;
 		this.startDate = startDate;
 		this.endDate = endDate;
 	}
@@ -39,6 +40,12 @@ public class Lease extends Agreement implements Taxable {
 
 	public double getTax() {
 		return tax;
+	}
+
+
+	@Override
+	public double calculateTotal() {
+		return calculateAgreement() + calculateTax();
 	}
 	
 	

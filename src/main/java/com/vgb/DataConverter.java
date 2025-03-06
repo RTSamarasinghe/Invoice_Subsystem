@@ -1,6 +1,7 @@
 package com.vgb;
 
 import java.awt.ItemSelectable;
+
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.List;
@@ -9,6 +10,7 @@ import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.thoughtworks.xstream.XStream;
 import com.vgb.CSVReader;
+
 
 /*
  * Outputs .json and .xml files parsed in as List objects.

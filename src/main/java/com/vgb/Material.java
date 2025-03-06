@@ -36,8 +36,8 @@ public class Material extends Item implements Taxable {
     }
     
     @Override
-    public char getType() {
-        return 'M';
+    public Object getType() {
+        return this.getClass();
     }
 
     public String getUnit() {

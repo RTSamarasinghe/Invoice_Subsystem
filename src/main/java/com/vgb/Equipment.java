@@ -25,8 +25,8 @@ public class Equipment extends Item implements Taxable {
     }
 
     @Override
-    public char getType() {
-        return 'E';
+    public Object getType() {
+        return this.getClass();
     }
 
     
@@ -45,7 +45,7 @@ public class Equipment extends Item implements Taxable {
                 "(" + getUuid() + ")" + '\n'+
                  getName() + '\n' +
                 ",'" + model + '\'' +
-                ",$" + price;
+                ",$" + price + '\n';
     }
 
 	@Override

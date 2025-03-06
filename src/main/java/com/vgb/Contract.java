@@ -30,8 +30,8 @@ public class Contract extends Item{
     }
 
     @Override
-    public char getType() {
-        return 'C';
+    public Object getType() {
+        return this.getClass();
     }
 
     

@@ -33,7 +33,7 @@ public abstract class Item {
     }
     
    
-    public abstract char getType();
+    public abstract Object getType();
     
     public abstract double calculateTotal();
     

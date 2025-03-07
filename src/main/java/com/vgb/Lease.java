@@ -10,7 +10,6 @@ public class Lease extends Agreement implements Taxable {
 	LocalDate endDate;
 	
 	
-	private double agreement_value;
 	private double tax;
 	private static final double FLAT_TAX = 1500.00;
 	
@@ -46,6 +45,12 @@ public class Lease extends Agreement implements Taxable {
 	@Override
 	public double calculateTotal() {
 		return calculateAgreement() + calculateTax();
+	}
+	
+	@Override
+	public String toString() {
+		return String.format("%12f, %12f",calculateTax(), calculateAgreement() ) ;
+		
 	}
 	
 	

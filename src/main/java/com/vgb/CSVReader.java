@@ -46,6 +46,7 @@ public class CSVReader {
         return persons;
     }
     
+    
     /**
      * Reads companies from the Companies CSV file.
      * 
@@ -127,31 +128,65 @@ public class CSVReader {
         return items;
     }
     
+    public static Map<UUID,Invoice> readInvoice(String path) throws IOException {
+    	Map<UUID, Invoice> invoices = new HashMap<>();
+
+        try (BufferedReader reader = new BufferedReader(new FileReader(path))) {
+            reader.readLine(); // Skip header
+
+            String line;
+            
+            
+            while ((line = reader.readLine()) != null) {
+            	
+            	if (line.isEmpty()) {
+                    continue; //Empty line bug
+                }
+                String[] parts = line.split(",");
+                
+                try {
+                    Invoice invoice = InvoiceFactory.createInvoice(parts);
+                    invoices.put(invoice.getInvoiceUUID(), invoice);
+                } catch (IllegalArgumentException e) {
+                    System.err.println("Skipping invalid row: " + Arrays.toString(parts) + " | Error: " + e.getMessage());
+                }
+            }
+        }
+
+        return invoices;
+    }
+    
     
 public static void main(String[] args) throws IOException {
 		//Debugging
 	
-//		Equipment x = new Equipment(UUID.fromString("7af2d8f9-d09e-4992-a41d-3bec9ed2aa31"), "balls", "XXXX", 95125);
-//		LocalDate startDate = LocalDate.parse("2024-01-01");
-//		LocalDate endDate = LocalDate.parse("2026-06-01");
+		Equipment x = new Equipment(UUID.fromString("7af2d8f9-d09e-4992-a41d-3bec9ed2aa31"), "balls", "XXXX", 95125);
+		LocalDate startDate = LocalDate.parse("2024-01-01");
+		LocalDate endDate = LocalDate.parse("2026-06-01");
 //
 //		LocalDateTime startTime = LocalDateTime.parse("2024-01-01T10:15:30");
 //		LocalDateTime endTime = LocalDateTime.parse("2024-01-02T11:15:30");
 //
 //	
-//		AgreementFactory leaseFactory = new LeaseFactory();
-//		Agreement lease = leaseFactory.createAgreement(x, startDate, endDate);
+		AgreementFactory leaseFactory = new LeaseFactory();
+		Agreement lease = leaseFactory.createAgreement(x, startDate, endDate);
 //		
 //		AgreementFactory rentalFactory = new RentalFactory();
 //		Agreement rental = rentalFactory.createAgreement(x,startTime , endTime);
 //		
 //		System.out.println(lease.calculateTotal());	
 //		System.out.println(rental.calculateTotal());
+//		System.out.println("Price: " + x.getPrice());
+//		System.out.println("Total: " + x.calculateTotal()); 
+//		System.out.println("Tax: " + x.calculateTax());
+		//System.out.println(x.getType());
 		
-//		System.out.println(x.getType());
+	System.out.println("Equipment: " + x.getName());
+	System.out.println("Lease: " + lease.calculateTotal());
 	
-	
-	System.out.println(readItems("data/Items.csv", readCompanies("data/Companies.csv", readPersons("data/Persons.csv"))));
+//	System.out.println(readItems("data/Items.csv", readCompanies("data/Companies.csv", readPersons("data/Persons.csv"))));
+		
+//		System.out.println(readInvoice("data/Invoices.csv"));
 	}
   
 }

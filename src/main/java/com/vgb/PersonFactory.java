@@ -17,7 +17,7 @@ public class PersonFactory {
         if (uuidStr.isEmpty()) {
             throw new IllegalArgumentException("Missing UUID in CSV: " + Arrays.toString(parts));
         }
-
+        
         UUID uuid;
         try {
             uuid = UUID.fromString(uuidStr);

@@ -8,7 +8,7 @@ import java.util.UUID;
 public class Equipment extends Item implements Taxable {
     private final String model;
     private final double price;
-    private final static double TAX_RATE = 0.525;
+    private final static double TAX_RATE = 0.0525;
     /**
      * Constructs an Equipment item with the given attributes
      * 
@@ -47,14 +47,16 @@ public class Equipment extends Item implements Taxable {
                 ",'" + model + '\'' +
                 ",$" + price + '\n';
     }
-
-	@Override
-	public double calculateTotal() {
-		return this.price;
-	}
-
-	@Override
+    
+    @Override
 	public double calculateTax() {		
 		return this.price * TAX_RATE;
 	}
+
+	@Override
+	public double calculateTotal() {
+		return this.price + calculateTax();
+	}
+
+	
 }

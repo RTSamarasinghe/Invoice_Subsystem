@@ -7,6 +7,7 @@ import java.util.UUID;
  * Represents material available in the system.
  */
 public class Material extends Item implements Taxable {
+	
     private final String unit;
     private final double costPerUnit;
     private double quantity;
@@ -34,11 +35,6 @@ public class Material extends Item implements Taxable {
         this.costPerUnit = costPerUnit;
         this.quantity = quantity;
     }
-    
-    @Override
-    public Object getType() {
-        return this.getClass();
-    }
 
     public String getUnit() {
         return unit;
@@ -48,16 +44,11 @@ public class Material extends Item implements Taxable {
     public double getCostPerUnit() {
         return costPerUnit;
     }
-
-    @Override
-    public String toString() {
-        return "Material: \n" +
-        		"(" + getUuid() + ")" +       
-                ", " + getName() + '\n' +
-                ", Units: '" + unit + '\n' +
-                ", Cost: " + costPerUnit;
+    
+    public double getQuantity() {
+    	return quantity;
     }
-
+    
 	@Override
 	public double calculateTotal() {
 		double price = this.costPerUnit * this.quantity;
@@ -70,5 +61,18 @@ public class Material extends Item implements Taxable {
 		return tax;
 	}
 
+	@Override
+	public String toString() {
+		return String.format("Material:%8s"
+				+"\n---------------------"
+				+ "\nCost per unit: %.2f" + " | " + "%-6s"
+				+ "\nQuantity: %.2f"
+				+ "\nTax: %.2f"
+				+ "\nTotal: %.2f",super.getName(),getCostPerUnit(),getUnit(),getQuantity(),calculateTax(),calculateTotal());
+		
+	}
+
+	
 
 }
+

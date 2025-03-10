@@ -115,7 +115,7 @@ public class CSVReaderTest {
 		 
 		 Equipment equipment = (Equipment)items.get(key1);
 		 
-		 assertEquals('E', equipment.getType(), "Equipment Type mismatch");
+		
 		 assertEquals("EX300Z", equipment.getModel(), "Equipment model mismatch");
 		 assertEquals(365000, equipment.getPrice(), "Equipment price mismatch");
 		 
@@ -130,7 +130,7 @@ public class CSVReaderTest {
 		 
 		 Material material = (Material) items.get(key2);
 		 
-		 assertEquals('M', material.getType(), "Material Type mismatch"); 
+		
 		 assertEquals("bag", material.getUnit(), "material model mismatch");
 		 assertEquals(42, material.getCostPerUnit(), "Material price mismatch");
 		 
@@ -144,7 +144,7 @@ public class CSVReaderTest {
 		 
 		 Contract contract = (Contract) items.get(key3);
 		 
-		 assertEquals('C', contract.getType(), "Contract Type mismatch"); 
+		 
 		 assertEquals("11efd8b7-3ddf-4884-bda4-91b9b8a6045d", contract.getCompanyUuid().toString(), "Contract contact UUID mismatch");
 		 
 	}

@@ -22,11 +22,10 @@ public class Lease extends Agreement implements Taxable {
 
 	@Override
 	public double calculateAgreement() {
-		long days = ChronoUnit.DAYS.between(startDate, endDate) + 1; 
-        double years = days / 365.0;
-        return Math.round((years / 5) * equipment.getPrice() * 1.5);
+	    long days = ChronoUnit.DAYS.between(startDate, endDate) + 1; 
+	    double years = days / 365.0;
+	    return Math.round((years / 5) * equipment.getPrice() * 1.5 * 100.0) / 100.0;
 	}
-
 
 	@Override
 	public double calculateTax() {
@@ -49,7 +48,12 @@ public class Lease extends Agreement implements Taxable {
 	
 	@Override
 	public String toString() {
-		return String.format("%12f, %12f",calculateTax(), calculateAgreement() ) ;
+		return String.format("Equipment:%-8s"
+				+ "\nLease:"
+				+"\n---------------------"
+				+ "\nTax: %.2f"
+				+ "\nAgreement: %.2f"
+				+ "\nTotal: %.2f",equipment.getName(),calculateTax(), calculateAgreement(), calculateTotal());
 		
 	}
 	

@@ -33,7 +33,7 @@ public abstract class Item {
     }
     
    
-    public abstract Object getType();
+   
     
     public abstract double calculateTotal();
     
@@ -41,7 +41,6 @@ public abstract class Item {
     public String toString() {
         return "Item: " + '\n' +
                 "(" + uuid + ")" +
-                ",'" + name + '\n' +
-                ", " + getType();
+                ",'" + name + '\n';             
     	}
 }

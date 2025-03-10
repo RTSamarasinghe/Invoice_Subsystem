@@ -28,8 +28,8 @@ public class Company {
         this.address = address;
     }
 
-    
-    public UUID getCompanyUuid() {
+
+	public UUID getCompanyUuid() {
         return this.companyUuid;
     }
 

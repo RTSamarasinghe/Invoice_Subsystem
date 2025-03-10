@@ -2,6 +2,7 @@ package com.vgb;
 
 import java.time.LocalDateTime;
 import java.time.temporal.ChronoUnit;
+import java.util.UUID;
 
 public class Rental extends Agreement implements Taxable {
 
@@ -18,6 +19,8 @@ public class Rental extends Agreement implements Taxable {
 		
 	}
 	
+	
+
 	@Override
 	public double calculateAgreement() {
 		long hours = ChronoUnit.HOURS.between(startTime, endTime);
@@ -33,4 +36,16 @@ public class Rental extends Agreement implements Taxable {
 	public double calculateTotal() {
 		return Math.round(calculateAgreement() + calculateTax());
 	}
+
+	@Override
+	public String toString() {
+		return String.format("Equipment:%-8s"
+				+ "\nRental:"
+				+"\n---------------------"
+				+ "\nTax: %.2f"
+				+ "\nAgreement: %.2f"
+				+ "\nTotal: %.2f",equipment.getName(),calculateTax(), calculateAgreement(), calculateTotal());
+		
+	}
+	
 }

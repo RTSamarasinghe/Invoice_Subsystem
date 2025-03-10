@@ -24,11 +24,6 @@ public class Equipment extends Item implements Taxable {
         this.price = price;
     }
 
-    @Override
-    public Object getType() {
-        return this.getClass();
-    }
-
     
     public String getModel() {
         return model;
@@ -45,7 +40,7 @@ public class Equipment extends Item implements Taxable {
                 "(" + getUuid() + ")" + '\n'+
                  getName() + '\n' +
                 ",'" + model + '\'' +
-                ",$" + price + '\n';
+                ",$ " + price + '\n';
     }
     
     @Override
@@ -58,5 +53,6 @@ public class Equipment extends Item implements Taxable {
 		return this.price + calculateTax();
 	}
 
+	
 	
 }

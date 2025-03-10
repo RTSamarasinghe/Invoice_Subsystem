@@ -9,7 +9,7 @@ import java.util.UUID;
 public class Contract extends Item{
     private final Company companyUuid;
     private double price;
-
+    
     /**
      * Constructs a Contract item with the given attributes
      * 
@@ -28,29 +28,33 @@ public class Contract extends Item{
         this.companyUuid = companyUuid;
         this.price = price;
     }
-
-    @Override
-    public Object getType() {
-        return this.getClass();
-    }
-
     
     public UUID getCompanyUuid() {
         return companyUuid.getCompanyUuid();
     }
-
-    @Override
-    public String toString() {
-        return "Contract{" +
-                "uuid=" + getUuid() +
-                ", name='" + getName() + '\'' +
-                ", companyUuid=" + companyUuid +
-                '}';
+    
+    public String getCompanyName() {
+    	return companyUuid.getName();
     }
+
 
 	@Override
 	public double calculateTotal() {
 		return price;
+	}
+	
+	public double getPrice() {
+		return price;
+	}
+	
+	@Override
+	public String toString() {
+		return String.format("Contract:%8s"
+				+"\n---------------------"
+				+ "\nCompany: %8s"
+				+ "\nTax: No tax"
+				+ "\nTotal: %.2f",super.getName(),getCompanyName(),calculateTotal());
+		
 	}
 
 

@@ -1,7 +1,7 @@
 package com.vgb;
 
 import java.util.UUID;
-
+//TODO: create get company method that returns the object that posses the UUID thats parsed in as an argument
 /**
  * Represents a company in the system.
  * Contains company information such as name, address, and contact person.
@@ -55,4 +55,14 @@ public class Company {
                 ", contactUuid=" + contactPerson +
                 '}';
     }
+    
+    public Company getCustomer(UUID mapUUID) {
+    	if(this.companyUuid == mapUUID) {
+    		return this;
+    	}
+    	else {
+    		return null;
+    	}
+    }
+    //TODO: Edit To string of this
 }

@@ -16,7 +16,7 @@ import java.util.UUID;
  * Utility class for reading CSV files.
  */
 public class CSVReader {
-
+//TODO: Create readInvoiceItem  method
     /**
      * Reads persons from the Persons CSV file.
      * 
@@ -158,5 +158,7 @@ public class CSVReader {
         return invoices;
     }
     
-    
+    public static void main(String[] args) {
+    //Debug
+    }
 }

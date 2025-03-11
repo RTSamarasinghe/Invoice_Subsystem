@@ -56,7 +56,7 @@ public class Lease extends Agreement implements Taxable {
 				+ "\nTotal: %.2f",equipment.getName(),calculateTax(), calculateAgreement(), calculateTotal());
 		
 	}
-	
+	//TODO: We need another method to calculate days and edit the toString() OR smack ChronoUnit.DAYS.between(startDate, endDate)
 	
 	
 }

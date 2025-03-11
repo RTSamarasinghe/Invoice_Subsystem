@@ -59,7 +59,8 @@ public class Invoice  {
 		public List<InvoiceItem> getItems() {
 			return items;
 		}
-
+//TODO: Edit to match example output
+		//TODO: fix the damn bug
 		
 		@Override
 		public String toString() {

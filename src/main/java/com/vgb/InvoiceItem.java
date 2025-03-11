@@ -1,12 +1,17 @@
 package com.vgb;
 
+import java.util.UUID;
+
 /**
  * Represents an item in an invoice.
  */
 public class InvoiceItem {
     private Object item;
+    //TODO: make Agreement and Item generic enough to be used in the methods
+    private UUID invoiceUUID;
 
-    public InvoiceItem(Object item) {
+    public InvoiceItem(UUID invoiceUUID,Object item) {
+    	this.invoiceUUID = invoiceUUID;
         this.item = item;
     }
 

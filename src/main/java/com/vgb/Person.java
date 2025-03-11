@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.UUID;
-
+//TODO: Edit toString
 /**
  * Represents a person in the system.
  * Contains personal information such as name, email addresses, etc.

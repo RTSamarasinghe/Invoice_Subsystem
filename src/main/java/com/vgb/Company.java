@@ -34,8 +34,8 @@ public class Company {
     }
 
     
-    public UUID getContactUuid() {
-        return this.contactPerson.getUuid();
+    public Person getContactPerson() {
+        return this.contactPerson;
     }
     
     public Address getAddress() {
@@ -48,12 +48,14 @@ public class Company {
 
     @Override
     public String toString() {
-        return "Company{" +
-                "companyUuid=" + companyUuid +
-                ", name='" + name + '\'' +
-                ", address='" + address.getFullAddress() + '\'' +
-                ", contactUuid=" + contactPerson +
-                '}';
+    	return String.format("%8s (%36s)"
+				+ "\n %s, %s (%36s)"
+				+ "\n %s "
+				+ "\n"
+				+ "\n %s",this.getName(),this.getCompanyUuid(), 
+				this.getContactPerson().getFirstName(),
+				this.getContactPerson().getLastName(), getContactPerson().getUuid(),
+				getContactPerson().getEmails(), getAddress().getFullAddress() );
     }
     
     public Company getCustomer(UUID mapUUID) {

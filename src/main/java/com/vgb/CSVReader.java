@@ -160,5 +160,15 @@ public class CSVReader {
     
     public static void main(String[] args) {
     //Debug
+    	try {
+    	Map<UUID, Person> person = readPersons("data/persons.csv");
+    	Map<UUID, Company> companies = readCompanies("data/Companies.csv", person);
+    	
+		System.out.println(readInvoice("data/Invoices.csv", person, companies));
+		
+		} catch (IOException e) {
+			
+			e.printStackTrace();
+		}
     }
 }

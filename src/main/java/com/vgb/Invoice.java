@@ -44,11 +44,11 @@ public class Invoice  {
 			return invoiceUUID;
 		}
 
-		public Company getCustomerUUID() {
+		public Company getCustomer() {
 			return customerUUID;
 		}
 
-		public Person getSalespersonUUID() {
+		public Person getSalesPerson() {
 			return salespersonUUID;
 		}
 
@@ -64,26 +64,26 @@ public class Invoice  {
 		
 		@Override
 		public String toString() {
-		    StringBuilder sb = new StringBuilder();
-		    
-		    sb.append(String.format("Invoice UUID: %s\n", invoiceUUID.toString()));
-		    sb.append(String.format("Customer UUID: %s\n", customerUUID.toString()));
-		    sb.append(String.format("Salesperson UUID: %s\n", salespersonUUID.toString()));
-		    sb.append(String.format("Invoice Date: %s\n", invoiceDate.toString()));
-		    sb.append("\nItems:\n");
-
-		    for (InvoiceItem item : items) {
-		        sb.append(item.toString()).append("\n");
-		    }
-
-		    sb.append(String.format("\nSubtotal: %.2f\n", calculateSubtotal()));
-		    sb.append(String.format("Tax Total: %.2f\n",calculateTaxTotal()));
-		    sb.append(String.format("Grand Total: %.2f\n", calculateGrandTotal()));
-		    
-		    sb.append(String.format("Grand Total: %.2f\n", calculateGrandTotal()));
-		    sb.append(String.format("Company name: %s" , getCustomerUUID().getName()));
-		    
-		    return sb.toString();
+		    return String.format(
+		    		"\n-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-="
+		    		+ '\n'
+		    		+"Invoice: %36s"
+		    		+"\nDate %14s"
+		    		+ '\n'
+		    		+"\nCustomer: \n%s (%36s)"
+		    		+ "\n %s (%36s) \n%s \n"
+		    		+ "\nSales Person:"
+		    		+ "\n %s (%36s) \n %s \n",
+		    		
+		    		
+		    		
+		    		
+		    		this.getInvoiceUUID(), this.getInvoiceDate(), this.getCustomer().getName(),
+		    		this.getCustomer().getCompanyUuid(),
+		    		getCustomer().getContactPerson().getFullName(), this.getCustomer().getContactPerson().getUuid(),
+		    		this.getCustomer().getContactPerson().getEmails(),
+		    		this.getSalesPerson().getFullName(), this.getSalesPerson().getUuid(),
+		    		this.getSalesPerson().getEmails());
 		}
 		
 	}

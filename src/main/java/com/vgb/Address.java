@@ -43,7 +43,7 @@ public class Address {
 	}
     
 	 public String getFullAddress() {
-	        return street + ", " + city + ", " + state + ", " + zip;
+	        return street + ",\n " + city + ", " + state + ",\n " + zip;
 	    }
 
     
